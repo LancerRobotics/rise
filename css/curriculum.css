@@ -1,4 +1,5 @@
 .curriculum_section {
+    margin-top: 30px;
     padding: 20px 0;
     background: #f8f9fa;
     min-height: calc(100vh - 100px);
@@ -97,6 +98,7 @@
     .lesson-sidebar {
       height: auto;
       position: relative;
+      margin-top: 0;
     }
     
     .main-content {
