@@ -105,3 +105,31 @@
       padding: 15px;
     }
   }
+
+  .quiz-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.form-check {
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background-color: #D6CFAF;
+    border: none;
+    padding: 10px 20px;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    color: #D6CFAF;
+}
