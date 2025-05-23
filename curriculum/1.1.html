@@ -71,6 +71,40 @@
     });
   </script>
 
+<style>
+    
+    
+    .lesson-sidebar {
+      height: calc(100vh - 100px);
+      position: sticky;
+      top: 20px;
+    }
+    
+    .course-outline {
+      height: 100%;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+
+    /* Customize scrollbar */
+    .course-outline::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .course-outline::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    
+    .course-outline::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    
+    .course-outline::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    </style>
 </head>
 
 <body>
@@ -125,19 +159,147 @@
             <ul class="lesson-list">
               <li onclick="window.location.href='curriculum.html'">
                 <span class="lesson-number">0</span>
-                <span class="lesson-title">Welcome to the Robotics Curriculum</span>
+                <span class="lesson-title">Curriculum</span>
               </li>
               <li class="active" onclick="window.location.href='1.1.html'">
                 <span class="lesson-number">1</span>
-                <span class="lesson-title">Introduction to VEX IQ</span>
+                <span class="lesson-title">What is Robotics?</span>
               </li>
               <li onclick="window.location.href='1.2.html'">
                 <span class="lesson-number">2</span>
-                <span class="lesson-title">Basic Components</span>
+                <span class="lesson-title">VEX IQ Kit Introduction</span>
               </li>
               <li onclick="window.location.href='1.3.html'">
                 <span class="lesson-number">3</span>
-                <span class="lesson-title">Building Your First Robot</span>
+                <span class="lesson-title">Basic Geometric Thinking and Reasoning</span>
+              </li>
+              <li onclick="window.location.href='1.4.html'">
+                <span class="lesson-number">4</span>
+                <span class="lesson-title">Introducing the Engineering and Design Process</span>
+              </li>
+              <li onclick="window.location.href='1.5.html'">
+                <span class="lesson-number">5</span>
+                <span class="lesson-title">Applying the EDP</span>
+              </li>
+              <li onclick="window.location.href='1.6.html'">
+                <span class="lesson-number">6</span>
+                <span class="lesson-title">Getting Started: Robot Soccer</span>
+              </li>
+              <li onclick="window.location.href='1.7.html'">
+                <span class="lesson-number">7</span>
+                <span class="lesson-title">The Importance of Documentation</span>
+              </li>
+              <li onclick="window.location.href='1.8.html'">
+                <span class="lesson-number">8</span>
+                <span class="lesson-title">Beginning to Code</span>
+              </li>
+              <li onclick="window.location.href='1.9.html'">
+                <span class="lesson-number">9</span>
+                <span class="lesson-title">Making Data-Driven Decisions</span>
+              </li>
+              <li onclick="window.location.href='1.10.html'">
+                <span class="lesson-number">10</span>
+                <span class="lesson-title">Building and Coding Conjoined</span>
+              </li>
+              <li onclick="window.location.href='1.11.html'">
+                <span class="lesson-number">11</span>
+                <span class="lesson-title">Manipulators and Intakes</span>
+              </li>
+              <li onclick="window.location.href='1.12.html'">
+                <span class="lesson-number">12</span>
+                <span class="lesson-title">Developing Designs</span>
+              </li>
+              <li onclick="window.location.href='1.13.html'">
+                <span class="lesson-number">13</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.14.html'">
+                <span class="lesson-number">14</span>
+                <span class="lesson-title">The Importance of Field Testing</span>
+              </li>
+              <li onclick="window.location.href='1.15.html'">
+                <span class="lesson-number">15</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.16.html'">
+                <span class="lesson-number">16</span>
+                <span class="lesson-title">Competition Day</span>
+              </li>
+              <li onclick="window.location.href='1.17.html'">
+                <span class="lesson-number">17</span>
+                <span class="lesson-title">Champions Bracket</span>
+              </li>
+              <li onclick="window.location.href='1.18.html'">
+                <span class="lesson-number">18</span>
+                <span class="lesson-title">Making Real World Connections</span>
+              </li>
+              <li onclick="window.location.href='1.19.html'">
+                <span class="lesson-number">19</span>
+                <span class="lesson-title">Work Day for Engineering Poster</span>
+              </li>
+              <li onclick="window.location.href='1.20.html'">
+                <span class="lesson-number">20</span>
+                <span class="lesson-title">Disassembling the Claw, Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.21.html'">
+                <span class="lesson-number">21</span>
+                <span class="lesson-title">Starting a Bigger Challenge</span>
+              </li>
+              <li onclick="window.location.href='1.22.html'">
+                <span class="lesson-number">22</span>
+                <span class="lesson-title">Coding the Clawbot</span>
+              </li>
+              <li onclick="window.location.href='1.23.html'">
+                <span class="lesson-number">23</span>
+                <span class="lesson-title">Refining Operator Input</span>
+              </li>
+              <li onclick="window.location.href='1.24.html'">
+                <span class="lesson-number">24</span>
+                <span class="lesson-title">Multi-Function Driving</span>
+              </li>
+              <li onclick="window.location.href='1.25.html'">
+                <span class="lesson-number">25</span>
+                <span class="lesson-title">Tug of War</span>
+              </li>
+              <li onclick="window.location.href='1.26.html'">
+                <span class="lesson-number">26</span>
+                <span class="lesson-title">Developing a Manipulator</span>
+              </li>
+              <li onclick="window.location.href='1.27.html'">
+                <span class="lesson-number">27</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.28.html'">
+                <span class="lesson-number">28</span>
+                <span class="lesson-title">Reaching for the Sky</span>
+              </li>
+              <li onclick="window.location.href='1.29.html'">
+                <span class="lesson-number">29</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.30.html'">
+                <span class="lesson-number">30</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.31.html'">
+                <span class="lesson-number">31</span>
+                <span class="lesson-title">Competition Day</span>
+              </li>
+              <li onclick="window.location.href='1.32.html'">
+                <span class="lesson-number">32</span>
+                <span class="lesson-title">Lightning Round</span>
+              </li>
+              <li onclick="window.location.href='1.33.html'">
+                <span class="lesson-number">33</span>
+                <span class="lesson-title">Making More Real World Connections</span>
+              </li>
+              <li onclick="window.location.href='1.34.html'">
+                <span class="lesson-number">34</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.35.html'">
+                <span class="lesson-number">35</span>
+                <span class="lesson-title">Disassembly and Looking Forward</span>
               </li>
             </ul>
           </div>
@@ -146,78 +308,94 @@
         <!-- Main content area with video -->
         <div class="col-md-9 main-content">
           <div class="video-container">
-            <h2>Introduction to VEX IQ</h2>
-            <div class="video-wrapper">
-              <iframe width="100%" height="600" src="https://www.youtube.com/embed/nX2xMjumEZI?si=FKxbB4q1EtW6yhmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            <h2>What is Robotics?</h2>
             <div class="video-description">
               <div>
-                <h3>Lesson Overview</h3>
-                <p>PLACEHOLDER</p>
+                <h3>Lesson Objectives</h3>
+                <ul>
+                  <li>Define what a robot is and explain what makes them up</li>
+                  <li>Identify Real-World Applications of Robots</li>
+                  <li>Define what an Engineer is and what they do</li>
+                </ul>
               </div>
               <div>
-                <h3>Quiz</h3>
-                <p>Test your knowledge about VEX IQ basics!</p>
-            
-                <form id="lessonQuiz" class="quiz-form">
-                    <div class="quiz-question">
-                        <p><strong>1. What is VEX IQ?</strong></p>
-                        <div class="form-check">
-                            <input type="radio" name="q1" value="a" class="form-check-input" id="q1a">
-                            <label class="form-check-label" for="q1a">A LEGO competitor</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="q1" value="b" class="form-check-input" id="q1b">
-                            <label class="form-check-label" for="q1b">An educational robotics platform</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="q1" value="c" class="form-check-input" id="q1c">
-                            <label class="form-check-label" for="q1c">A video game</label>
-                        </div>
-                    </div>
-            
-                    <div class="quiz-question mt-4">
-                        <p><strong>2. Which of these is NOT a main component of VEX IQ?</strong></p>
-                        <div class="form-check">
-                            <input type="radio" name="q2" value="a" class="form-check-input" id="q2a">
-                            <label class="form-check-label" for="q2a">Motors</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="q2" value="b" class="form-check-input" id="q2b">
-                            <label class="form-check-label" for="q2b">Solar panels</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="q2" value="c" class="form-check-input" id="q2c">
-                            <label class="form-check-label" for="q2c">Structural pieces</label>
-                        </div>
-                    </div>
-            
-                    <div class="quiz-question mt-4">
-                        <p><strong>3. What programming language is commonly used with VEX IQ?</strong></p>
-                        <div class="form-check">
-                            <input type="radio" name="q3" value="a" class="form-check-input" id="q3a">
-                            <label class="form-check-label" for="q3a">VEXcode Blocks</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="q3" value="b" class="form-check-input" id="q3b">
-                            <label class="form-check-label" for="q3b">JavaScript</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="q3" value="c" class="form-check-input" id="q3c">
-                            <label class="form-check-label" for="q3c">Python</label>
-                        </div>
-                    </div>
-            
-                    <button type="submit" class="btn btn-primary mt-4">Submit Quiz</button>
-                </form>
-                <div id="quizResults" class="mt-3" style="display: none;">
-                    <h4>Results:</h4>
-                    <p id="score"></p>
-                </div>
+                <h3>Lesson Overview</h3>
+                <p>The purpose is to introduce students to the idea of robotics and engineering, and have them start focusing attention towards different robotics ideas. In addition, students will gain foundational knowledge about the usage of robotics in everyday life. Students will break off into pairs and draw their own ideas of what their ideal robot would do.</p>
+              </div>
             </div>
+            <div> <!-- Materials Needed -->
+              <h3>Materials Needed</h3>
+              <div>
+                <ul>
+                  <li>Paper and Pencil for every student</li>
+                  <li><a href="#introduction-video">Rise Introduction Video</a></li>
+                </ul>
+              </div>
+            </div>
+            <div> <!-- Getting Started -->
+              <h3>Getting Started</h3>
+              <ul>
+                <li>Begin with a whole-group discussion about robots. Ask the students about what they think robots are, and if they’ve seen robots being used in their everyday lives. If they haven’t, ask them about what they think a robot is and what tasks in their lives would be easier if they had one. </li>
+                <li>Show the RISE introduction video</li>
+                <br>
+                <li><strong>Discussion Prompts:</strong>
+                  <ul>
+                    <li>What do you think a robot is?</li>
+                    <li>Robots can do a lot of things by themselves. How would you use a robot to help in your everyday life?</li>
+                    <li>What parts do you think you need to make a robot?</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div> <!-- Monitoring Progress -->
+              <h3>Monitoring Progress</h3>
+              <ul>
+                <li>Break off into pairs, distribute paper and pencils, and ask groups to draw their own ideal robot.</li>
+                <li>As students are working, walk around to different groups and look and listen for student engagement. Encourage students to talk to their partners and come up with multiple ideas.</li>
+                <br>
+                <li><strong>Facilitation Questions:</strong>
+                  <ul>
+                    <li>What parts of your robot help it solve the problem you want it to solve?</li>
+                    <li>Have you seen or heard of anything in real life that could do what your robot can do?</li>
+                    <li>What would you like to learn about robots in our lessons?</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div> <!-- Wrapping Up -->
+              <h3>Wrapping Up</h3>
+              <ul>
+                <li>Come back together for a whole group discussion about their drawings. Ask for volunteers to show everybody their drawings and tell the group what their ideal robot would do. Have them point out parts on their robot that would help it complete their tasks. </li>
+                <br>
+                <li><strong>Discussion Prompts:</strong>
+                  <ul>
+                    <li>How easy do you think it is to make a robot?</li>
+                    <li>What issues do you think you would run into if you tried to create one right now?</li>
+                    <li>How would the robots that you drew help your community?</li>
+                  </ul>
+                </li>
+              </ul>
+              <div> <!-- Assessment - part of Wrapping Up-->
+                <h4 style="color:#36454F">Assessment</h4>
+                <ul>
+                  <li>Students can describe what makes something a robot</li>
+                  <li>Students can name at least three examples of robotics in everyday life</li>
+                </ul>
+              </div>
+              <div> <!-- Preparation for next class - part of Wrapping Up-->
+                <h4 style="color:#36454F">Preparation for next class</h4>
+                <p>Next class will focus on getting into the actual kit. Be prepared to have open and flat areas (ideally tables), as the students will need to take out parts from the kit and have room to put them. Some parts are small, so make sure to be prepared to tell the students to be careful not to lose anything. </p>
+              </div>
+            </div>
+            <div> <!-- Additional Resources -->
+              <h3>Resources</h3>
+              <div class="video-wrapper" id="introduction-video" style="scroll-margin-top: 250px;">
+                <iframe src="https://www.youtube.com/embed/nX2xMjumEZI?si=FKxbB4q1EtW6yhmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -270,6 +448,8 @@
   <!-- End Google Map -->
 
 
+
+  <script src="../js/update_lesson_scroll.js"></script>
 </body>
 
 </html>

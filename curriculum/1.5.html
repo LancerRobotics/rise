@@ -34,6 +34,42 @@
 <link rel="shortcut icon" href="../images/rise-logo.png">
 <!-- https://www.figma.com/design/bH9kkWq3Uy2YDcXDogIyaH/Rise-Logo?m=auto&t=VEkLJ54ST0KvTQGn-1 -->
 
+<script src="../js/custom.js"></script>
+  
+  <!-- Quiz Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const quizForm = document.getElementById('lessonQuiz');
+      if (quizForm) {
+        quizForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const answers = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'a'
+          };
+          
+          let score = 0;
+          let total = Object.keys(answers).length;
+          
+          Object.keys(answers).forEach(question => {
+            const selected = document.querySelector(`input[name="${question}"]:checked`);
+            if (selected && selected.value === answers[question]) {
+              score++;
+            }
+          });
+          
+          const results = document.getElementById('quizResults');
+          const scoreElement = document.getElementById('score');
+          if (results && scoreElement) {
+            results.style.display = 'block';
+            scoreElement.textContent = `You got ${score} out of ${total} questions correct!`;
+          }
+        });
+      }
+    });
+  </script>
 
 <style>
     
@@ -133,7 +169,7 @@
                 <span class="lesson-number">2</span>
                 <span class="lesson-title">VEX IQ Kit Introduction</span>
               </li>
-              <li class="active" onclick="window.location.href='1.3.html'">
+              <li onclick="window.location.href='1.3.html'">
                 <span class="lesson-number">3</span>
                 <span class="lesson-title">Basic Geometric Thinking and Reasoning</span>
               </li>
@@ -141,7 +177,7 @@
                 <span class="lesson-number">4</span>
                 <span class="lesson-title">Introducing the Engineering and Design Process</span>
               </li>
-              <li onclick="window.location.href='1.5.html'">
+              <li class="active" onclick="window.location.href='1.5.html'">
                 <span class="lesson-number">5</span>
                 <span class="lesson-title">Applying the EDP</span>
               </li>
@@ -272,19 +308,19 @@
         <!-- Main content area with video -->
         <div class="col-md-9 main-content">
           <div class="video-container">
-            <h2>Basic Geometric Thinking and Reasoning</h2>
+            <h2>Applying the EDP</h2>
             <div class="video-description">
               <div>
                 <h3>Lesson Objectives</h3>
                 <ul>
-                  <li>Complete the Get in Shape Activity</li>
-                  <li>Learn the importance of organization with their VEX IQ kits</li>
-                  <li>Begin to think about how they can use the provided structures in the kits to achieve their design goals</li>
+                  <li>Be able to apply their knowledge of the engineering design process to an activity</li>
+                  <li>Understand the different steps of the engineering design process and how each of those steps apply to a real-world project</li>
+                  <li>Be able to work in groups and gain an understanding of why teamwork is important as an engineer</li>
                 </ul>
               </div>
               <div>
                 <h3>Lesson Overview</h3>
-                <p>The purpose of the Get in Shape Activity is to enable students to start thinking about how they can use the various materials in the kit in order to accomplish a task, starting with constructing simple shapes and ending with a more complex design challenge.</p>
+                <p>Students in this activity will try one cycle of the Engineering and Design Process, using a VEX activity. Afterwards, they’ll reflect on how they could use the process again in order to improve their designs.</p>
               </div>
             </div>
             <div> <!-- Materials Needed -->
@@ -292,36 +328,39 @@
               <div>
                 <ul>
                   <li>VEX IQ Robotics Kit components</li>
-                  <li>Computer or Projector</li>
-                  <li><a href="https://docs.google.com/document/d/1zsC0VXVlKVugSVOmD_uJKhomhlOGiN2eC65facrQduY/edit#">Get in Shape Activity</a></li>
+                  <li>Paper and pencil</li>
+                  <li><a href="https://docs.google.com/document/d/1rnpQ1VDEIH3lhpHp8fl-YybA034D73LZIz_rRy6mufc/edit?tab=t.0#heading=h.bovs0olr7jzc">Hang Out Activity</a></li>
                 </ul>
               </div>
             </div>
             <div> <!-- Getting Started -->
               <h3>Getting Started</h3>
-              <p>Begin with grouping the students into even(ish) groups, with the number of groups matching the number of kits. Distribute the kits to these groups once they are formed, making sure they don’t open them yet. Once the groups are ready, have each student use the parts from their kits to do the first task in the <a href="https://docs.google.com/document/d/1zsC0VXVlKVugSVOmD_uJKhomhlOGiN2eC65facrQduY/edit#">Get in Shape Activity</a>. Make sure once their shapes are created, they stop before moving on.</p>
+              <ul>
+                <li>Begin with a brief discussion to remind students of the learning from last class, and see if they can name all steps of the Engineering Design Process. At the end of the discussion, tell the students they are going to engage one whole cycle of the EDP with this next activity.</li>
+                <li>Group students to distribute the VEX kits, making sure they don’t open them yet.</li>
+                <br>
+                <li><strong>Discussion Prompts</strong>
+                  <ul>
+                    <li>What does EDP stand for? Can you remember all of the steps?</li>
+                    <li>What does iterative mean?</li>
+                    <li>Is each step completely unmovable, or can you follow the cycle more loosely?</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <div> <!-- Monitoring Progress -->
               <h3>Monitoring Progress</h3>
               <ul>
-                <li>After the first task, have the students put each piece they used back away in the exact spot they found them. Before beginning the next task in the activity, discuss the importance of neatness and organization.</li>
-                <li>After the discussion, have the students repeat the process of construction and clean up for all the subsequent tasks</li>
-                <br>
-                <li><strong>Discussion Prompts:</strong>
-                  <ul>
-                    <li>Why is neatness important when making a large project?</li>
-                    <li>Which do you think costs more time: leaving materials out, or putting things away as you go?</li>
-                  </ul>
-                </li>
+                <li>To begin, show the class the Hang Out Activity, and pass out the paper and pencils. Ask the class to tell you what the assignment is, or the problem that they’re solving. Then, on their paper, have them write 3 important details about the assignment.</li>
+                <li>Once the students finish, have them turn their papers over, and draw at least three different ideas for how to solve the problem.</li>
+                <li>Once they’ve completed their drawings, have each student pick the design they want to construct and give them time to do so.</li>
                 <br>
                 <li><strong>Facilitation</strong>
                   <ul>
-                    <li>Display the <a href="#workshop-image">image of the workshop</a>, and emphasize the importance of keeping things where they belong
-                      <ul>
-                        <li>Make note of how every item has a specific place, and the workspace is kept clear of clutter so all materials in use are easy to locate</li>
-                      </ul>
-                    </li>
-                    <li>“It actually takes less time to break from working to put things away as you go along than it does to leave things out, because that way you always know exactly where what you need will be.”</li>
+                    <li>The introduction requests are the Ask and Research steps of the EDP - make sure to note that out loud!</li>
+                    <li>When testing, make sure the students don’t touch their structures after they set them! If it falls, that’s the result of their test, not a measurement.</li>
+                    <li>Encourage their drawings to be as different from each other as possible, and they can have more than 3</li>
+                    <li>When building, they aren’t limited to one exact drawing, encourage them to be inspired by their own ideas-but keep prolonged experimentation to a minimum, for the sake of time.</li>
                   </ul>
                 </li>
               </ul>
@@ -329,14 +368,25 @@
             <div> <!-- Wrapping Up -->
               <h3>Wrapping Up</h3>
               <ul>
-                <li>After the final task of the activity, have the groups with each kit come together to work collaboratively to make another cube, except this time, they must put the VEX control hub in the middle. There are no restrictions on how they do it, but the hub cannot move inside the cube. Emphasize being neat and being careful.</li>
-                <li>After this task, have the students discuss the different approaches they had to putting the hub in the cube. Clean up the kits, double checking each one has been properly restored by its group.</li>
+                <li>Once all students are finished constructing, test their designs by measuring from the edge of the table/desk to the furthest point on their structure.</li>
+                <li>After the activity, have students reflect on their designs and their thought processes. Prompt students to consider how they could explore different avenues of approaching innovative solutions if given more opportunities with fewer constraints (time, materials). Encourage students to think about how this activity could be applied to robotics in the building process (as noted in the discussion prompts).</li>
+                <li>Lastly, clean up and ensure that all materials are returned to their respective places and organized properly - if necessary, remove the batteries and controllers for charging (noted below).</li>
                 <br>
                 <li><strong>Discussion Prompts:</strong>
                   <ul>
-                    <li>How was the way each group put the hub in unique?</li>
-                    <li>Were there any similarities between methods? Differences?</li>
-                    <li>Ask them to think about before next class: If there are many ways to do the same thing, how do you find the best option?</li>
+                    <li>Ask students where/how they gained inspiration for their ideas
+                      <ul>
+                        <li>Why did they choose the designs they did over the others?</li>
+                      </ul>
+                    </li>
+                    <li>Prompt students to discuss how this activity applies to robotics as a whole
+                      <ul>
+                        <li>Why is weight important?</li>
+                        <li>What could happen if the weight is unbalanced in a robot or building?</li>
+                        <li>Can you think of any other ways this activity might apply to other real-world designs?</li>
+                      </ul>
+                    </li>
+                    <li>How were everyone’s designs similar or different?</li>
                   </ul>
                 </li>
               </ul>
@@ -344,21 +394,21 @@
                 <h4 style="color:#36454F">Assessment</h4>
                 <ul>
                   <li>Successful completion of activity </li>
-                  <li>Cooperation between students to complete final challenge</li>
+                  <li>Brainstorming drawings completed and have clearly different ideas present</li>
                 </ul>
               </div>
               <div> <!-- Preparation for next class - part of Wrapping Up-->
                 <h4 style="color:#36454F">Preparation for next class</h4>
-                <p>Next class is where students will begin to differentiate the way they approach problems, and the ending question is meant to have them think about the concept of brainstorming. Encourage students to come to next class with answers, and emphasize there’s no such thing as a wrong answer, so they will be encouraged to contemplate and discuss the question.</p>
+                <p>Next class begins the first major STEM unit for the course, so make sure that all electronics (control hub batteries and controllers) are charged or have a proper area to charge in. Additionally, it is highly recommended to have an area within the classroom where students can save their work that can be an established and undisturbed zone for multiple weeks. The space does not need to be large, merely even just a couple square feet, but it will save a lot of time both for construction and also later in the process when the students are customizing their robots.</p>
               </div>
             </div>
-            <div> <!-- Additional Resources -->
+            <!--<div>
               <h3>Resources</h3>
               <div id="workshop-image" style="scroll-margin-top: 250px;">
                 <img src="images/1.3/workshop.png" alt="Workshop" style="width: 80%; height: auto;">
                 <p>Refer to this image in Facilitation</p>
               </div>
-            </div>
+            </div>-->
           </div>  
         </div>
 
@@ -416,12 +466,6 @@
 
 
   <script src="../js/update_lesson_scroll.js"></script>
-
-  <script>
-    if (window.location.hash) {
-      history.replaceState(null, '', window.location.pathname);
-    }
-  </script>
 </body>
 
 </html>

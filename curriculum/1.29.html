@@ -34,6 +34,42 @@
 <link rel="shortcut icon" href="../images/rise-logo.png">
 <!-- https://www.figma.com/design/bH9kkWq3Uy2YDcXDogIyaH/Rise-Logo?m=auto&t=VEkLJ54ST0KvTQGn-1 -->
 
+<script src="../js/custom.js"></script>
+  
+  <!-- Quiz Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const quizForm = document.getElementById('lessonQuiz');
+      if (quizForm) {
+        quizForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const answers = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'a'
+          };
+          
+          let score = 0;
+          let total = Object.keys(answers).length;
+          
+          Object.keys(answers).forEach(question => {
+            const selected = document.querySelector(`input[name="${question}"]:checked`);
+            if (selected && selected.value === answers[question]) {
+              score++;
+            }
+          });
+          
+          const results = document.getElementById('quizResults');
+          const scoreElement = document.getElementById('score');
+          if (results && scoreElement) {
+            results.style.display = 'block';
+            scoreElement.textContent = `You got ${score} out of ${total} questions correct!`;
+          }
+        });
+      }
+    });
+  </script>
 
 <style>
     
@@ -133,7 +169,7 @@
                 <span class="lesson-number">2</span>
                 <span class="lesson-title">VEX IQ Kit Introduction</span>
               </li>
-              <li class="active" onclick="window.location.href='1.3.html'">
+              <li onclick="window.location.href='1.3.html'">
                 <span class="lesson-number">3</span>
                 <span class="lesson-title">Basic Geometric Thinking and Reasoning</span>
               </li>
@@ -237,7 +273,7 @@
                 <span class="lesson-number">28</span>
                 <span class="lesson-title">Reaching for the Sky</span>
               </li>
-              <li onclick="window.location.href='1.29.html'">
+              <li class="active" onclick="window.location.href='1.29.html'">
                 <span class="lesson-number">29</span>
                 <span class="lesson-title">Work Day</span>
               </li>
@@ -272,96 +308,78 @@
         <!-- Main content area with video -->
         <div class="col-md-9 main-content">
           <div class="video-container">
-            <h2>Basic Geometric Thinking and Reasoning</h2>
+            <h2>Work Day</h2>
+            <div class="video-wrapper">
+              <iframe width="100%" height="600" src="https://www.youtube.com/embed/nX2xMjumEZI?si=FKxbB4q1EtW6yhmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             <div class="video-description">
               <div>
-                <h3>Lesson Objectives</h3>
-                <ul>
-                  <li>Complete the Get in Shape Activity</li>
-                  <li>Learn the importance of organization with their VEX IQ kits</li>
-                  <li>Begin to think about how they can use the provided structures in the kits to achieve their design goals</li>
-                </ul>
-              </div>
-              <div>
                 <h3>Lesson Overview</h3>
-                <p>The purpose of the Get in Shape Activity is to enable students to start thinking about how they can use the various materials in the kit in order to accomplish a task, starting with constructing simple shapes and ending with a more complex design challenge.</p>
+                <p>PLACEHOLDER</p>
               </div>
-            </div>
-            <div> <!-- Materials Needed -->
-              <h3>Materials Needed</h3>
               <div>
-                <ul>
-                  <li>VEX IQ Robotics Kit components</li>
-                  <li>Computer or Projector</li>
-                  <li><a href="https://docs.google.com/document/d/1zsC0VXVlKVugSVOmD_uJKhomhlOGiN2eC65facrQduY/edit#">Get in Shape Activity</a></li>
-                </ul>
-              </div>
+                <h3>Quiz</h3>
+                <p>Test your knowledge about VEX IQ basics!</p>
+            
+                <form id="lessonQuiz" class="quiz-form">
+                    <div class="quiz-question">
+                        <p><strong>1. What is VEX IQ?</strong></p>
+                        <div class="form-check">
+                            <input type="radio" name="q1" value="a" class="form-check-input" id="q1a">
+                            <label class="form-check-label" for="q1a">A LEGO competitor</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="q1" value="b" class="form-check-input" id="q1b">
+                            <label class="form-check-label" for="q1b">An educational robotics platform</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="q1" value="c" class="form-check-input" id="q1c">
+                            <label class="form-check-label" for="q1c">A video game</label>
+                        </div>
+                    </div>
+            
+                    <div class="quiz-question mt-4">
+                        <p><strong>2. Which of these is NOT a main component of VEX IQ?</strong></p>
+                        <div class="form-check">
+                            <input type="radio" name="q2" value="a" class="form-check-input" id="q2a">
+                            <label class="form-check-label" for="q2a">Motors</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="q2" value="b" class="form-check-input" id="q2b">
+                            <label class="form-check-label" for="q2b">Solar panels</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="q2" value="c" class="form-check-input" id="q2c">
+                            <label class="form-check-label" for="q2c">Structural pieces</label>
+                        </div>
+                    </div>
+            
+                    <div class="quiz-question mt-4">
+                        <p><strong>3. What programming language is commonly used with VEX IQ?</strong></p>
+                        <div class="form-check">
+                            <input type="radio" name="q3" value="a" class="form-check-input" id="q3a">
+                            <label class="form-check-label" for="q3a">VEXcode Blocks</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="q3" value="b" class="form-check-input" id="q3b">
+                            <label class="form-check-label" for="q3b">JavaScript</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="q3" value="c" class="form-check-input" id="q3c">
+                            <label class="form-check-label" for="q3c">Python</label>
+                        </div>
+                    </div>
+            
+                    <button type="submit" class="btn btn-primary mt-4">Submit Quiz</button>
+                </form>
+                <div id="quizResults" class="mt-3" style="display: none;">
+                    <h4>Results:</h4>
+                    <p id="score"></p>
+                </div>
             </div>
-            <div> <!-- Getting Started -->
-              <h3>Getting Started</h3>
-              <p>Begin with grouping the students into even(ish) groups, with the number of groups matching the number of kits. Distribute the kits to these groups once they are formed, making sure they don’t open them yet. Once the groups are ready, have each student use the parts from their kits to do the first task in the <a href="https://docs.google.com/document/d/1zsC0VXVlKVugSVOmD_uJKhomhlOGiN2eC65facrQduY/edit#">Get in Shape Activity</a>. Make sure once their shapes are created, they stop before moving on.</p>
             </div>
-            <div> <!-- Monitoring Progress -->
-              <h3>Monitoring Progress</h3>
-              <ul>
-                <li>After the first task, have the students put each piece they used back away in the exact spot they found them. Before beginning the next task in the activity, discuss the importance of neatness and organization.</li>
-                <li>After the discussion, have the students repeat the process of construction and clean up for all the subsequent tasks</li>
-                <br>
-                <li><strong>Discussion Prompts:</strong>
-                  <ul>
-                    <li>Why is neatness important when making a large project?</li>
-                    <li>Which do you think costs more time: leaving materials out, or putting things away as you go?</li>
-                  </ul>
-                </li>
-                <br>
-                <li><strong>Facilitation</strong>
-                  <ul>
-                    <li>Display the <a href="#workshop-image">image of the workshop</a>, and emphasize the importance of keeping things where they belong
-                      <ul>
-                        <li>Make note of how every item has a specific place, and the workspace is kept clear of clutter so all materials in use are easy to locate</li>
-                      </ul>
-                    </li>
-                    <li>“It actually takes less time to break from working to put things away as you go along than it does to leave things out, because that way you always know exactly where what you need will be.”</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div> <!-- Wrapping Up -->
-              <h3>Wrapping Up</h3>
-              <ul>
-                <li>After the final task of the activity, have the groups with each kit come together to work collaboratively to make another cube, except this time, they must put the VEX control hub in the middle. There are no restrictions on how they do it, but the hub cannot move inside the cube. Emphasize being neat and being careful.</li>
-                <li>After this task, have the students discuss the different approaches they had to putting the hub in the cube. Clean up the kits, double checking each one has been properly restored by its group.</li>
-                <br>
-                <li><strong>Discussion Prompts:</strong>
-                  <ul>
-                    <li>How was the way each group put the hub in unique?</li>
-                    <li>Were there any similarities between methods? Differences?</li>
-                    <li>Ask them to think about before next class: If there are many ways to do the same thing, how do you find the best option?</li>
-                  </ul>
-                </li>
-              </ul>
-              <div> <!-- Assessment - part of Wrapping Up-->
-                <h4 style="color:#36454F">Assessment</h4>
-                <ul>
-                  <li>Successful completion of activity </li>
-                  <li>Cooperation between students to complete final challenge</li>
-                </ul>
-              </div>
-              <div> <!-- Preparation for next class - part of Wrapping Up-->
-                <h4 style="color:#36454F">Preparation for next class</h4>
-                <p>Next class is where students will begin to differentiate the way they approach problems, and the ending question is meant to have them think about the concept of brainstorming. Encourage students to come to next class with answers, and emphasize there’s no such thing as a wrong answer, so they will be encouraged to contemplate and discuss the question.</p>
-              </div>
-            </div>
-            <div> <!-- Additional Resources -->
-              <h3>Resources</h3>
-              <div id="workshop-image" style="scroll-margin-top: 250px;">
-                <img src="images/1.3/workshop.png" alt="Workshop" style="width: 80%; height: auto;">
-                <p>Refer to this image in Facilitation</p>
-              </div>
-            </div>
-          </div>  
+          </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -416,12 +434,6 @@
 
 
   <script src="../js/update_lesson_scroll.js"></script>
-
-  <script>
-    if (window.location.hash) {
-      history.replaceState(null, '', window.location.pathname);
-    }
-  </script>
 </body>
 
 </html>
