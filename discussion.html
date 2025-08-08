@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="RISE, Robotics, STEM, Discussion, Forum" />
+  <meta name="description" content="Community discussion page for the RISE project." />
+  <meta name="author" content="" />
+
+  <title>RISE | Discussion</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Custom styles for Discussion Page -->
+  <style>
+    .discussion_section {
+      background-color: #fbfbfb;
+    }
+
+    .discussion-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Form for asking a new question */
+    .ask-question-form {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      border-top: 5px solid #D6CFAF;
+    }
+
+    .ask-question-form h4 {
+        font-family: 'Merriweather Sans', sans-serif;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .ask-question-form input,
+    .ask-question-form textarea {
+        width: 100%;
+        border: 1px solid #ddd;
+        height: 50px;
+        margin-bottom: 15px;
+        padding-left: 15px;
+        background-color: #f9f9f9;
+        outline: none;
+        border-radius: 5px;
+    }
+    
+    .ask-question-form textarea {
+        height: 120px;
+        padding-top: 15px;
+    }
+
+    .ask-question-form button {
+        border: none;
+        display: inline-block;
+        font-family: 'Merriweather Sans', sans-serif;
+        text-transform: uppercase;
+        padding: 12px 30px;
+        background-color: #D6CFAF;
+        border: 1px solid #D6CFAF;
+        border-radius: 5px;
+        color: #000000;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .ask-question-form button:hover {
+        background-color: #c4b89b;
+    }
+
+    /* Individual Post/Thread Styling */
+    .discussion-post {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    }
+    
+    .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .post-header .avatar {
+        width: 45px;
+        height: 45px;
+        background-color: #D6CFAF;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 20px;
+        margin-right: 15px;
+        font-family: 'Merriweather Sans', sans-serif;
+    }
+    
+    .post-meta .author {
+        font-weight: bold;
+        color: #000;
+        margin: 0;
+    }
+    
+    .post-meta .timestamp {
+        font-size: 0.85em;
+        color: #777;
+    }
+
+    .post-body p {
+        color: #333;
+        line-height: 1.7;
+    }
+    
+    .post-actions {
+        margin-top: 20px;
+    }
+
+    .post-actions .reply-btn {
+        font-size: 0.9em;
+        color: #0445a1;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .post-actions .reply-btn:hover {
+        text-decoration: underline;
+    }
+
+    /* Replies Styling */
+    .replies-container {
+        margin-top: 20px;
+        margin-left: 30px;
+        padding-left: 30px;
+        border-left: 3px solid #e0e0e0;
+    }
+    
+    .discussion-reply {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    
+    /* Reply Form */
+    .reply-form-container {
+        margin-top: 15px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>RISE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ourteam.html">Our Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="curriculum/curriculum.html">Learn</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="discussion.html">Discussion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#contact-us">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- Discussion Section -->
+  <section class="discussion_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Community Discussion
+        </h2>
+        <p>
+            Ask questions, share ideas, and connect with the community.
+        </p>
+      </div>
+      
+      <div class="discussion-container">
+        
+        <!-- Form to ask a new question -->
+        <div class="ask-question-form" id="ask-form">
+            <h4>Ask a New Question</h4>
+            <form onsubmit="handlePostQuestion(event)">
+                <input type="text" id="ask-name" placeholder="Your Name" required/>
+                <textarea id="ask-question" placeholder="Type your question here..." required></textarea>
+                <button type="submit">Post Question</button>
+            </form>
+        </div>
+
+        <!-- Container for all the posts -->
+        <div id="posts-list">
+            <!-- Example Post 1 -->
+            <div class="discussion-post">
+                <div class="post-header">
+                    <div class="avatar">C</div>
+                    <div class="post-meta">
+                        <p class="author">Our lovely leader Calvin Coakley</p>
+                        <span class="timestamp">June 10, 2025</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>Welcome to our new discussion forum! We're excited to hear your thoughts and answer any questions you have about the RISE initiative.</p>
+                </div>
+                <div class="post-actions">
+                    <span class="reply-btn" onclick="showReplyForm(this)">
+                        <i class="fa fa-reply" aria-hidden="true"></i> Reply
+                    </span>
+                    <div class="replies-container">
+                        <!-- Replies will be injected here by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Post 2 -->
+            <div class="discussion-post">
+                <div class="post-header">
+                    <div class="avatar">J</div>
+                    <div class="post-meta">
+                        <p class="author">Junyi Liu</p>
+                        <span class="timestamp">June 16, 2025</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>This is an amazing project! Are there opportunities for people to volunteer remotely, for example by helping with curriculum development?</p>
+                </div>
+                <div class="post-actions">
+                    <span class="reply-btn" onclick="showReplyForm(this)">
+                        <i class="fa fa-reply" aria-hidden="true"></i> Reply
+                    </span>
+                    <div class="replies-container">
+                       <div class="discussion-reply">
+                            <div class="post-header">
+                                <div class="avatar">C</div>
+                                <div class="post-meta">
+                                    <p class="author">Calvin Coakley</p>
+                                    <span class="timestamp">June 17, 2025</span>
+                                </div>
+                            </div>
+                            <div class="post-body">
+                                <p>Hi Sarah, thank you for the kind words and your interest! We are definitely open to that. Please use the contact form to send us your details, and we can discuss it further.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end Discussion Section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="social-box">
+      <h4>Follow Us</h4>
+      <div class="box">
+        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        © <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/custom.js"></script>
+
+  <!-- JavaScript for Discussion Page Interactivity -->
+  <script>
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    function getFormattedDate() {
+        const d = new Date();
+        return `${monthNames[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+    }
+
+    // Handles posting a new question
+    function handlePostQuestion(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('ask-name').value;
+        const question = document.getElementById('ask-question').value;
+        
+        if (!name.trim() || !question.trim()) {
+            alert("Please fill out both name and question fields.");
+            return;
+        }
+
+        const newPostHTML = `
+            <div class="discussion-post">
+                <div class="post-header">
+                    <div class="avatar">${name.charAt(0).toUpperCase()}</div>
+                    <div class="post-meta">
+                        <p class="author">${name}</p>
+                        <span class="timestamp">${getFormattedDate()}</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>${question.replace(/\n/g, '<br>')}</p>
+                </div>
+                <div class="post-actions">
+                    <span class="reply-btn" onclick="showReplyForm(this)">
+                        <i class="fa fa-reply" aria-hidden="true"></i> Reply
+                    </span>
+                    <div class="replies-container"></div>
+                </div>
+            </div>`;
+
+        const postsList = document.getElementById('posts-list');
+        postsList.insertAdjacentHTML('afterbegin', newPostHTML);
+
+        // Clear the form
+        document.getElementById('ask-name').value = '';
+        document.getElementById('ask-question').value = '';
+    }
+
+    // Shows the form to reply to a specific post
+    function showReplyForm(replyButton) {
+        const postActions = replyButton.parentElement;
+        
+        // Prevent adding multiple reply forms
+        if (postActions.querySelector('.reply-form-container')) {
+            return;
+        }
+
+        const replyFormHTML = `
+            <div class="reply-form-container">
+                <form class="ask-question-form" style="padding: 20px; margin-top: 15px; border-top: 3px solid #eee;" onsubmit="handlePostReply(event, this)">
+                    <input type="text" placeholder="Your Name" required />
+                    <textarea placeholder="Type your reply..." required></textarea>
+                    <button type="submit">Submit Reply</button>
+                </form>
+            </div>`;
+        
+        postActions.insertAdjacentHTML('beforeend', replyFormHTML);
+        postActions.querySelector('textarea').focus();
+    }
+
+    // Handles submitting a reply
+    function handlePostReply(event, form) {
+        event.preventDefault();
+
+        const name = form.querySelector('input').value;
+        const replyText = form.querySelector('textarea').value;
+        
+        if (!name.trim() || !replyText.trim()) {
+            alert("Please fill out both name and reply fields.");
+            return;
+        }
+
+        const newReplyHTML = `
+            <div class="discussion-reply">
+                <div class="post-header">
+                    <div class="avatar">${name.charAt(0).toUpperCase()}</div>
+                    <div class="post-meta">
+                        <p class="author">${name}</p>
+                        <span class="timestamp">${getFormattedDate()}</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>${replyText.replace(/\n/g, '<br>')}</p>
+                </div>
+            </div>`;
+
+        const repliesContainer = form.closest('.post-actions').querySelector('.replies-container');
+        repliesContainer.insertAdjacentHTML('beforeend', newReplyHTML);
+
+        // Remove the reply form
+        form.parentElement.remove();
+    }
+  </script>
+
+</body>
+</html>
