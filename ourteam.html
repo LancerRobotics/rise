@@ -26,9 +26,25 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <style>
+    /* Team member image rectangle styling */
+    .team-member .img-box {
+      width:157px; /* requested width */
+      height:236px; /* requested height */
+      margin:0 auto;
+    }
+    .team-member .img-box img {
+      width:100%;
+      height:100%;
+      object-fit:cover; /* fill rectangle while preserving aspect */
+      border-radius:0; /* remove circle */
+      display:block;
+    }
+  </style>
+
 </head>
 
-<body>
+<body class="ourteam-page">
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -78,104 +94,104 @@
       <div class="heading_container heading_center">
         <h2>Our Team</h2>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member" style="padding: 15px; text-align: center;">
-            <div class="img-box" style="width: 120px; height: 120px; margin: 0 auto;">
-              <img src="images/imgnotavailable.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+      <div class="row team-grid">
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/team-images/rusheel.jpeg" alt="Photo of Rusheel Mishra - Founder and President" loading="lazy">
             </div>
-            <div class="detail-box" style="margin-top: 15px;">
-              <h5 style="font-size: 16px;">Rusheel Mishra</h5>
-              <p style="font-size: 14px;">Founder and President</p>
-            </div>
+            <h5>Rusheel Mishra</h5>
+            <p class="role">Founder and President</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member" style="padding: 15px; text-align: center;">
-            <div class="img-box" style="width: 120px; height: 120px; margin: 0 auto;">
-              <img src="images/imgnotavailable.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/team-images/arin.jpeg" alt="Photo of Arin Kulkarni - Co-Founder and Vice President" loading="lazy">
             </div>
-            <div class="detail-box" style="margin-top: 15px;">
-              <h5 style="font-size: 16px;">Arin Kulkarni</h5>
-              <p style="font-size: 14px;">Co-Founder and Vice President</p>
-            </div>
+            <h5>Arin Kulkarni</h5>
+            <p class="role">Co-Founder and Vice President</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member" style="padding: 15px; text-align: center;">
-            <div class="img-box" style="width: 120px; height: 120px; margin: 0 auto;">
-              <img src="images/imgnotavailable.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/imgnotavailable.jpg" alt="Photo of Joey Deng - Co-Founder and Vice President of Curriculum" loading="lazy">
             </div>
-            <div class="detail-box" style="margin-top: 15px;">
-              <h5 style="font-size: 16px;">Joey Deng</h5>
-              <p style="font-size: 14px;">Co-Founder and Vice President of Curriculum</p>
-            </div>
+            <h5>Joey Deng</h5>
+            <p class="role">Co-Founder &amp; VP of Curriculum</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member" style="padding: 15px; text-align: center;">
-            <div class="img-box" style="width: 120px; height: 120px; margin: 0 auto;">
-              <img src="images/imgnotavailable.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/imgnotavailable.jpg" alt="Photo of Calvin Coakley - Head of Livingston Chapter" loading="lazy">
             </div>
-            <div class="detail-box" style="margin-top: 15px;">
-              <h5 style="font-size: 16px;">Calvin Coakley</h5>
-              <p style="font-size: 14px;">Head of Livingston Chapter</p>
-            </div>
+            <h5>Calvin Coakley</h5>
+            <p class="role">Head of Livingston Chapter</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member" style="padding: 15px; text-align: center;">
-            <div class="img-box" style="width: 120px; height: 120px; margin: 0 auto;">
-              <img src="images/imgnotavailable.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/imgnotavailable.jpg" alt="Photo of Alexander Zhang - Technical Lead" loading="lazy">
             </div>
-            <div class="detail-box" style="margin-top: 15px;">
-              <h5 style="font-size: 16px;">Alexander Zhang</h5>
-              <p style="font-size: 14px;">Technical Lead</p>
-            </div>
+            <h5>Alexander Zhang</h5>
+            <p class="role">Technical Lead</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member" style="padding: 15px; text-align: center;">
-            <div class="img-box" style="width: 120px; height: 120px; margin: 0 auto;">
-              <img src="images/imgnotavailable.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/team-images/ayden.jpeg" alt="Photo of Ayden Dai - Build Curriculum Designer" loading="lazy">
             </div>
-            <div class="detail-box" style="margin-top: 15px;">
-              <h5 style="font-size: 16px;">Ayden Dai</h5>
-              <p style="font-size: 14px;">Build Curriculum Designer</p>
-            </div>
+            <h5>Ayden Dai</h5>
+            <p class="role">Build Curriculum Designer</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member" style="padding: 15px; text-align: center;">
-            <div class="img-box" style="width: 120px; height: 120px; margin: 0 auto;">
-              <img src="images/imgnotavailable.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/imgnotavailable.jpg" alt="Photo of Alan Muttappillil - Lead Website Designer" loading="lazy">
             </div>
-            <div class="detail-box" style="margin-top: 15px;">
-              <h5 style="font-size: 16px;">Alan Muttappillil</h5>
-              <p style="font-size: 14px;">Lead Website Designer</p>
-            </div>
+            <h5>Alan Muttappillil</h5>
+            <p class="role">Lead Website Designer</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member" style="padding: 15px; text-align: center;">
-            <div class="img-box" style="width: 120px; height: 120px; margin: 0 auto;">
-              <img src="images/imgnotavailable.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/imgnotavailable.jpg" alt="Photo of Kyle Chase - Outreach" loading="lazy">
             </div>
-            <div class="detail-box" style="margin-top: 15px;">
-              <h5 style="font-size: 16px;">Kyle Chase</h5>
-              <p style="font-size: 14px;">Outreach</p>
-            </div>
+            <h5>Kyle Chase</h5>
+            <p class="role">Outreach</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member" style="padding: 15px; text-align: center;">
-            <div class="img-box" style="width: 120px; height: 120px; margin: 0 auto;">
-              <img src="images/imgnotavailable.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/imgnotavailable.jpg" alt="Photo of Abhimaan Chandan - Curriculum" loading="lazy">
             </div>
-            <div class="detail-box" style="margin-top: 15px;">
-              <h5 style="font-size: 16px;">Abhimaan Chandan</h5>
-              <p style="font-size: 14px;">Curriculum</p>
+            <h5>Abhimaan Chandan</h5>
+            <p class="role">Curriculum</p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/imgnotavailable.jpg" alt="Photo of Abhimaan Chandan - Curriculum" loading="lazy">
             </div>
+            <h5>Karson Jiang</h5>
+            <p class="role">Volunteer</p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 d-flex">
+          <div class="team-member">
+            <div class="img-box">
+              <img src="images/imgnotavailable.jpg" alt="Photo of Abhimaan Chandan - Curriculum" loading="lazy">
+            </div>
+            <h5>Kimaya Sutone</h5>
+            <p class="role">Curriculum</p>
           </div>
         </div>
       </div>
@@ -191,16 +207,16 @@
         Follow Us
       </h4>
       <div class="box">
-        <a href="">
+        <a href="" aria-label="Facebook" title="Facebook">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
-        <a href="">
+        <a href="" aria-label="Twitter" title="Twitter">
           <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
-        <a href="">
+        <a href="" aria-label="YouTube" title="YouTube">
           <i class="fa fa-youtube" aria-hidden="true"></i>
         </a>
-        <a href="https://www.instagram.com/rise.robotics/">
+        <a href="https://www.instagram.com/rise.robotics/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
           <i class="fa fa-instagram" aria-hidden="true"></i>
         </a>
       </div>
