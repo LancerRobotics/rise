@@ -152,7 +152,7 @@ a:focus {
 
 .navbar-brand span:hover {
   transform: scale(1.03);
-    box-shadow: 0px 7px 12px black;
+  box-shadow: 0px 7px 12px black;
 }
 
 .custom_nav-container {
@@ -779,7 +779,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 25px;
+  margin-top: 0px;
 }
 
 .info_section .social-box .box {
@@ -909,6 +909,19 @@ a:focus {
 .professional_section.layout_padding.support_us .img-box img:hover {
   cursor: pointer;
   transform: scale(1.05);
+}
+
+.professional_section.layout_padding.support_us .detail-box .text {
+  padding: 20px;
+  margin-top: 31px;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.professional_section.layout_padding.support_us .detail-box .text:hover {
+  transform: scale(1.03);
+  box-shadow: -4px 7px 12px black;
 }
 
 /* Other media settings are in responsive.css */
