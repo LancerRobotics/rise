@@ -997,6 +997,13 @@ a:focus {
   border-radius:2px;
 }
 
+.ourteam-page .team-member .member-school {
+  font-size: 14px;
+  color: #555;
+  margin-top: 0px;
+  padding: 0 5px;
+}
+
 @media (max-width: 575.98px) {
   .ourteam-page .team-member {
     padding:16px 14px 20px;
