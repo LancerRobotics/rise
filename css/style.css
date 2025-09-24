@@ -1026,29 +1026,3 @@ a:focus {
     height:210px;
   }
 }
-
-.under-development-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.96);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-  padding: 32px 16px;
-}
-.under-development-overlay h2 {
-  color: #36454F;
-  margin-bottom: 8px;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.under-development-overlay p {
-  color: #555;
-  font-size: 1rem;
-  margin: 0;
-}
