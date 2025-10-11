@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn - RISE Robotics</title>
+  <link rel="stylesheet" href="styles.css"> <!-- if you want to reuse your site CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #loginBox {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 400px;
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #0077cc;
+      color: white;
+      cursor: pointer;
+    }
+    #content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loginBox">
+    <h2>Enter Password to Access Learn Materials</h2>
+    <input type="password" id="passwordInput" placeholder="Password">
+    <br>
+    <button onclick="checkPassword()">Submit</button>
+    <p id="error" style="color: red;"></p>
+  </div>
+
+  <div id="content">
+    <h1>Learn Materials</h1>
+    <p>Welcome to the private Learn section of RISE Robotics!</p>
+    <!-- Replace this with your actual learn materials -->
+  </div>
+
+  <script>
+    const correctPassword = "RISE2025"; // change to your password
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      if (input === correctPassword) {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      } else {
+        document.getElementById("error").innerText = "Incorrect password.";
+      }
+    }
+  </script>
+
+</body>
+</html>
