@@ -1,95 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Learn - RISE Robotics</title>
-  <link rel="stylesheet" href="styles.css"> <!-- if you want to reuse your site CSS -->
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+
+  <title>RISE | Learn</title> 
+
+  <!-- curriculum stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../css/curriculum.css" />
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../css/responsive.css" rel="stylesheet" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/rise-logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/rise-logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/rise-logo.png">
+  <link rel="shortcut icon" href="../images/rise-logo.png">
+  <!-- https://www.figma.com/design/bH9kkWq3Uy2YDcXDogIyaH/Rise-Logo?m=auto&t=VEkLJ54ST0KvTQGn-1 -->
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    #loginBox {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
-      text-align: center;
-      max-width: 400px;
-    }
-    input {
-      padding: 10px;
-      width: 80%;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      background: #0077cc;
-      color: white;
+    .lesson-card {
       cursor: pointer;
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    button:hover {
-      background: #005fa3;
+    .lesson-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .lesson-sidebar {
+      height: calc(100vh - 100px);
+      position: sticky;
+      top: 20px;
+    }
+    
+    .course-outline {
+      height: 100%;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+
+    /* Customize scrollbar */
+    .course-outline::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .course-outline::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    
+    .course-outline::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    
+    .course-outline::-webkit-scrollbar-thumb:hover {
+      background: #555;
     }
   </style>
-</head>
-<body>
-  <div id="loginBox">
-    <h2>Enter Password to Access Learn Materials</h2>
-    <input type="password" id="passwordInput" placeholder="Password">
-    <br>
-    <button onclick="checkPassword()">Submit</button>
-    <p id="error" style="color: red;"></p>
-  </div>
+
+  <!-- Authentication Check - Must be in head to run before page loads -->
   <script>
-    const correctPassword = "RISE2025"; // change to your password
-    
-    // Check if user has already authenticated
-    window.onload = function() {
+    // Check authentication before page loads
+    (function() {
       const isAuthenticated = localStorage.getItem("riseAuthenticated");
-      const fromCurriculum = document.referrer.includes('/curriculum/');
-      
-      // Only auto-redirect if authenticated AND not coming from curriculum pages
-      if (isAuthenticated === "true" && !fromCurriculum) {
-        // User already logged in, redirect immediately
-        window.location.href = "curriculum/curriculum.html";
-      } else if (isAuthenticated === "true" && fromCurriculum) {
-        // Coming from curriculum, just show success message instead of redirecting
-        document.getElementById("loginBox").innerHTML = `
-          <h2>Already Logged In</h2>
-          <p>You are already authenticated.</p>
-          <button onclick="window.location.href='curriculum/curriculum.html'">Go to Curriculum</button>
-        `;
+      if (isAuthenticated !== "true") {
+        // Not authenticated, redirect to learn page
+        window.location.href = "../learn.html";
       }
-    };
-    
-    function checkPassword() {
-      const input = document.getElementById("passwordInput").value;
-      if (input === correctPassword) {
-        // Save authentication status
-        localStorage.setItem("riseAuthenticated", "true");
-        // Redirect to curriculum page
-        window.location.href = "curriculum/curriculum.html";
-      } else {
-        document.getElementById("error").innerText = "Incorrect password.";
-      }
-    }
-    
-    // Allow pressing Enter to submit
-    document.getElementById("passwordInput").addEventListener("keypress", function(event) {
-      if (event.key === "Enter") {
-        checkPassword();
-      }
-    });
+    })();
   </script>
+
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="../index.html">
+              <span>
+                 RISE
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../ourteam.html">Our Team</a>
+                </li>
+                <li class="nav-item" style="display:none;">
+                  <a class="nav-link" href="../stem.html">STEM</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="curriculum.html">Learn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html#contact-us">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <section class="curriculum_section">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar with lesson list -->
+        <div class="col-md-3 lesson-sidebar">
+          <div class="course-outline">
+            <h3>Robotics</h3>
+            <ul class="lesson-list">
+              <li onclick="window.location.href='curriculum.html'">
+                <span class="lesson-number">0</span>
+                <span class="lesson-title">Curriculum</span>
+              </li>
+              <li onclick="window.location.href='1.1.html'">
+                <span class="lesson-number">1</span>
+                <span class="lesson-title">What is Robotics?</span>
+              </li>
+              <li onclick="window.location.href='1.2.html'">
+                <span class="lesson-number">2</span>
+                <span class="lesson-title">VEX IQ Kit Introduction</span>
+              </li>
+              <li onclick="window.location.href='1.3.html'">
+                <span class="lesson-number">3</span>
+                <span class="lesson-title">Basic Geometric Thinking and Reasoning</span>
+              </li>
+              <li onclick="window.location.href='1.4.html'">
+                <span class="lesson-number">4</span>
+                <span class="lesson-title">Introducing the Engineering and Design Process</span>
+              </li>
+              <li onclick="window.location.href='1.5.html'">
+                <span class="lesson-number">5</span>
+                <span class="lesson-title">Applying the EDP</span>
+              </li>
+              <li onclick="window.location.href='1.6.html'">
+                <span class="lesson-number">6</span>
+                <span class="lesson-title">Getting Started: Robot Soccer</span>
+              </li>
+              <li onclick="window.location.href='1.7.html'">
+                <span class="lesson-number">7</span>
+                <span class="lesson-title">The Importance of Documentation</span>
+              </li>
+              <li onclick="window.location.href='1.8.html'">
+                <span class="lesson-number">8</span>
+                <span class="lesson-title">Making Data-Driven Decisions</span>
+              </li>
+              <li onclick="window.location.href='1.9.html'">
+                <span class="lesson-number">9</span>
+                <span class="lesson-title">Building and Documenting Conjoined</span>
+              </li>
+              <li onclick="window.location.href='1.10.html'">
+                <span class="lesson-number">10</span>
+                <span class="lesson-title">Manipulators and Intakes</span>
+              </li>
+              <li onclick="window.location.href='1.11.html'">
+                <span class="lesson-number">11</span>
+                <span class="lesson-title">Developing Designs</span>
+              </li>
+              <li onclick="window.location.href='1.12.html'">
+                <span class="lesson-number">12</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.13.html'">
+                <span class="lesson-number">13</span>
+                <span class="lesson-title">The Importance of Field Testing</span>
+              </li>
+              <li onclick="window.location.href='1.14.html'">
+                <span class="lesson-number">14</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.15.html'">
+                <span class="lesson-number">15</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.16.html'">
+                <span class="lesson-number">16</span>
+                <span class="lesson-title">Competition Day</span>
+              </li>
+              <li onclick="window.location.href='1.17.html'">
+                <span class="lesson-number">17</span>
+                <span class="lesson-title">Making Real World Connections</span>
+              </li>
+              <li onclick="window.location.href='1.18.html'">
+                <span class="lesson-number">18</span>
+                <span class="lesson-title">Work Day for Engineering Poster</span>
+              </li>
+              <li onclick="window.location.href='1.19.html'">
+                <span class="lesson-number">19</span>
+                <span class="lesson-title">Disassembling the Claw, Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.20.html'">
+                <span class="lesson-number">20</span>
+                <span class="lesson-title">Starting a Bigger Challenge</span>
+              </li>
+              <li onclick="window.location.href='1.21.html'">
+                <span class="lesson-number">21</span>
+                <span class="lesson-title">Refining Operator Input</span>
+              </li>
+              <li onclick="window.location.href='1.22.html'">
+                <span class="lesson-number">22</span>
+                <span class="lesson-title">Multi-Function Driving</span>
+              </li>
+              <li onclick="window.location.href='1.23.html'">
+                <span class="lesson-number">23</span>
+                <span class="lesson-title">Tug of War</span>
+              </li>
+              <li onclick="window.location.href='1.24.html'">
+                <span class="lesson-number">24</span>
+                <span class="lesson-title">Developing a Manipulator</span>
+              </li>
+              <li onclick="window.location.href='1.25.html'">
+                <span class="lesson-number">25</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.26.html'">
+                <span class="lesson-number">26</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.27.html'">
+                <span class="lesson-number">27</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.28.html'">
+                <span class="lesson-number">28</span>
+                <span class="lesson-title">Reaching for the Sky</span>
+              </li>
+              <li onclick="window.location.href='1.29.html'">
+                <span class="lesson-number">29</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.30.html'">
+                <span class="lesson-number">30</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.31.html'">
+                <span class="lesson-number">31</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.32.html'">
+                <span class="lesson-number">32</span>
+                <span class="lesson-title">Competition Day</span>
+              </li>
+              <li onclick="window.location.href='1.33.html'">
+                <span class="lesson-number">33</span>
+                <span class="lesson-title">Making More Real World Connections</span>
+              </li>
+              <li onclick="window.location.href='1.34.html'">
+                <span class="lesson-number">34</span>
+                <span class="lesson-title">Work Day</span>
+              </li>
+              <li onclick="window.location.href='1.35.html'">
+                <span class="lesson-number">35</span>
+                <span class="lesson-title">Disassembly and Looking Forward</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Main content area -->
+        <div class="col-md-9 main-content">
+          <div style="padding: 20px;">
+            <h2 class="mb-4">Course Overview</h2>
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.1.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">1. What is Robotics?</h3>
+                  <p style="color: #666;">Students will be introduced to the idea of robotics and engineering.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.2.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">2. VEX IQ Kit Introduction</h3>
+                  <p style="color: #666;">Students will learn the different parts in their robotics kits as well as the different categories that they belong to.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.3.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">3. Basic Geometric Thinking and Reasoning</h3>
+                  <p style="color: #666;">Enable students to start thinking about how they can use the various materials in the kit in order to accomplish a task.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.4.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">4. Introducing the Engineering and Design Process</h3>
+                  <p style="color: #666;">In this lesson, students will be introduced to the Engineering Design Process, the most fundamental concept of the course.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.5.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">5. Applying the EDP</h3>
+                  <p style="color: #666;">Students in this activity will try one cycle of the Engineering and Design Process, using a VEX activity.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.6.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">6. Getting Started: Robot Soccer</h3>
+                  <p style="color: #666;">Students will learn the rules to their first major design challenge: getting a robot to play football! </p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.7.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">7. The Importance of Documentation</h3>
+                  <p style="color: #666;">This lesson introduces the secondmost important conecept in the course: Engineering Documentation.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.8.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">8. Making Data-Driven Decisions</h3>
+                  <p style="color: #666;">In this lesson, students will learn how to construct and analyze data tables in order to make informed decisions.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.9.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">9. Building and Documenting Conjoined</h3>
+                  <p style="color: #666;">Students will apply the base skills they've been learning in previous lessons to a culminating task, setting the stage for making their own designs.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.10.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">10. Manipulators and Intakes</h3>
+                  <p style="color: #666;">In this lesson, students learn the definition of a manipulator versus an intake, and how those concepts can be applied to their challenge.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.11.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">11. Developing Designs</h3>
+                  <p style="color: #666;">Students will be assigned their first real design project: creating a manipulator for their Robot Soccer robot.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.12.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">12. Work Day</h3>
+                  <p style="color: #666;">Instead of learning a new concept, students will continue the design process for their manipulators.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.13.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">13. The Importance of Field Testing</h3>
+                  <p style="color: #666;">As a brief interuption to the students' independent work, they will learn a new way to go about testing their designs.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.14.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">14. Work Day</h3>
+                  <p style="color: #666;">Students will spend the day continuing to test and develop their designs prior to the challenge.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.15.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">15. Work Day</h3>
+                  <p style="color: #666;">Students will spend the day continuing to test and develop their designs prior to the challenge.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.16.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">16. Competition Day</h3>
+                  <p style="color: #666;">After 15 lessons of hard work, students get to compete in their first major challenge, and play Robot Soccer!</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.17.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">17. Making Real World Connections</h3>
+                  <p style="color: #666;">Now that the students have completed their first unit, they'll take the time to reflect on their progress so far, as well as begin a small project applying their knowledge of the EDP to their daily lives.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.18.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">18. Work Day for Engineering Poster</h3>
+                  <p style="color: #666;">Students will spend this lesson working on the poster project they began in the last lesson, as well as preparing to present it in the front of the class.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.19.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">19. Disassembling the Claw, Poster Presentation Day</h3>
+                  <p style="color: #666;">To finish their Poster project, students will present their engineering solutions in front of the whole class! With the time left, they'll do some prep work for starting the next unit in the next lesson.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.20.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">20. Starting a Bigger Challenge</h3>
+                  <p style="color: #666;">In this lesson, students will learn about their new and final design challenge for the course.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.21.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">21. Refining Operator Input</h3>
+                  <p style="color: #666;">This is the first of a series of lessons in which students will get to have fun with their robots whiles also gaining experience driving it, before they begin their design work.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.22.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">22. Multi-Function Driving</h3>
+                  <p style="color: #666;">In this lesson, students will try controlling alll aspects of their robot at once in a fun driving challenge.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.23.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">23. Tug of War</h3>
+                  <p style="color: #666;">Students will learn about the concept of Criteria and Constraints with a small sample of their larger challenge that they previewed earlier.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.24.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">24. Developing a Manipulator</h3>
+                  <p style="color: #666;">With this lesson, students will begin a new design project: making a new manipulator that can perform their challenge.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.25.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">25. Work Day</h3>
+                  <p style="color: #666;">Students will continue their independent work designing a new manipulator.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.26.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">26. Work Day</h3>
+                  <p style="color: #666;">Students will continue their independent work designing a new manipulator.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.27.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">27. Work Day</h3>
+                  <p style="color: #666;">Students will continue their independent work designing a new manipulator.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.28.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">28. Reaching for the Sky</h3>
+                  <p style="color: #666;">This lesson introduces the second aspect of the design challenge: developing a lift arm to go with the manipulator.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.29.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">29. Work Day</h3>
+                  <p style="color: #666;">Students will work on their arm designs, as well as continuing their work on their claw if necessary.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.30.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">30. Work Day</h3>
+                  <p style="color: #666;">Students will work on their arm designs, as well as continuing their work on their claw if necessary.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.31.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">31. Work Day</h3>
+                  <p style="color: #666;">Students will work on their arm designs, as well as continuing their work on their claw if necessary.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.32.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">32. Competition Day</h3>
+                  <p style="color: #666;">Combining their designs from the past lessons, students will compete in the culminating challenge of the course!</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.33.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">33. Making More Real World Connections</h3>
+                  <p style="color: #666;">Under Construction</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.34.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">34. Work Day</h3>
+                  <p style="color: #666;">Under Construction</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="lesson-card" onclick="window.location.href='1.35.html'">
+                  <h3 style="color: #333; font-size: 1.2rem;">35. Disassembly and Looking Forward</h3>
+                  <p style="color: #666;">Under Construction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="social-box">
+      <h4>
+        Follow Us
+      </h4>
+      <div class="box">
+        <a href="">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/rise.robotics/">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- end info_section -->
+
+  
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/header.js"></script>
+  <script src="../js/sidebar.js"></script>
+
+  <script>
+    //alert("Note: This page is currently under development.")
+  </script>
+
+
+
+  <script src="../js/update_lesson_scroll.js"></script>
 </body>
+
 </html>
