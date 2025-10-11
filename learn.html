@@ -57,20 +57,29 @@
     <p>Welcome to the private Learn section of RISE Robotics!</p>
     <!-- Replace this with your actual learn materials -->
   </div>
-
+  
   <script>
-    const correctPassword = "RISE2025"; // change to your password
+  const correctPassword = "RISE2025"; // change to your password
 
-    function checkPassword() {
-      const input = document.getElementById("passwordInput").value;
-      if (input === correctPassword) {
-      // Redirect to the curriculum page
-        window.location.href = "curriculum/curriculum.html";
-      } else {
-        document.getElementById("error").innerText = "Incorrect password.";
-      }
+  // Check if user already unlocked before
+  if (localStorage.getItem("learnAccess") === "true") {
+    // Skip login page
+    window.location.href = "curriculum/curriculum.html";
+  }
+
+  function checkPassword() {
+    const input = document.getElementById("passwordInput").value;
+    if (input === correctPassword) {
+      // Remember access so user doesn't retype password
+      localStorage.setItem("learnAccess", "true");
+
+      // Redirect to curriculum page
+      window.location.href = "curriculum/curriculum.html";
+    } else {
+      document.getElementById("error").innerText = "Incorrect password.";
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>
