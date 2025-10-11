@@ -64,8 +64,8 @@
     function checkPassword() {
       const input = document.getElementById("passwordInput").value;
       if (input === correctPassword) {
-        document.getElementById("loginBox").style.display = "none";
-        document.getElementById("content").style.display = "block";
+      // Redirect to the curriculum page
+        window.location.href = "curriculum.html";
       } else {
         document.getElementById("error").innerText = "Incorrect password.";
       }
