@@ -95,6 +95,18 @@
     }
     </style>
 
+  <!-- Authentication Check - Must be in head to run before page loads -->
+  <script>
+    // Check authentication before page loads
+    (function() {
+      const isAuthenticated = localStorage.getItem("riseAuthenticated");
+      if (isAuthenticated !== "true") {
+        // Not authenticated, redirect to learn page
+        window.location.href = "../learn.html";
+      }
+    })();
+  </script>
+
 </head>
 
 <body>
