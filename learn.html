@@ -179,19 +179,10 @@
     // Check if user has already authenticated
     window.onload = function() {
       const isAuthenticated = localStorage.getItem("riseAuthenticated");
-      const fromCurriculum = document.referrer.includes('/curriculum/');
       
-      // Only auto-redirect if authenticated AND not coming from curriculum pages
-      if (isAuthenticated === "true" && !fromCurriculum) {
-        // User already logged in, redirect immediately
+      // If authenticated, always redirect to curriculum (no special case for referrer)
+      if (isAuthenticated === "true") {
         window.location.href = "/curriculum/curriculum.html";
-      } else if (isAuthenticated === "true" && fromCurriculum) {
-        // Coming from curriculum, just show success message instead of redirecting
-        document.getElementById("loginBox").innerHTML = `
-          <h2>Already Logged In</h2>
-          <p style="color: #666; margin-bottom: 20px;">You are already authenticated.</p>
-          <button onclick="window.location.href='/curriculum/curriculum.html'">Go to Curriculum</button>
-        `;
       }
     };
     
