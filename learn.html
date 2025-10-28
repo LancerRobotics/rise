@@ -25,70 +25,6 @@
       margin: 0;
       padding: 0;
     }
-    
-    .login_section {
-      padding: 90px 0;
-      min-height: calc(100vh - 200px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f5f5f5;
-    }
-    
-    #loginBox {
-      background: white;
-      padding: 3rem 2rem;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 450px;
-      width: 100%;
-    }
-    
-    #loginBox h2 {
-      color: #333;
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-      font-weight: 600;
-    }
-    
-    #loginBox input {
-      padding: 12px 15px;
-      width: 100%;
-      margin: 15px 0;
-      border-radius: 8px;
-      border: 2px solid #e0e0e0;
-      font-size: 16px;
-      transition: border-color 0.3s;
-    }
-    
-    #loginBox input:focus {
-      outline: none;
-      border-color: #0077cc;
-    }
-    
-    #loginBox button {
-      padding: 12px 40px;
-      border: none;
-      border-radius: 8px;
-      background: #0077cc;
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 600;
-      margin-top: 10px;
-      transition: background 0.3s;
-    }
-    
-    #loginBox button:hover {
-      background: #005fa3;
-    }
-    
-    #error {
-      color: #d32f2f;
-      margin-top: 15px;
-      font-size: 14px;
-    }
   </style>
 </head>
 
@@ -153,7 +89,9 @@
     </div>
   </section>
 
-    <section class="login_section">
+  <!-- Password-protected section commented out -->
+  <!--
+  <section class="login_section">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8">
@@ -168,42 +106,45 @@
       </div>
     </div>
   </section>
+  -->
+
+  <!-- You can now link directly to your learning materials here -->
+  <section class="learn_section">
+    <div class="container">
+      <h2>Welcome to the Learn Materials</h2>
+      <p><a href="/curriculum/curriculum.html">Click here to access the curriculum</a></p>
+    </div>
+  </section>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
-  
+
+  <!-- Commented out password script -->
+  <!--
   <script>
-    const correctPassword = "RISE2025"; // change to your password
-    
-    // Check if user has already authenticated
+    const correctPassword = "RISE2025";
     window.onload = function() {
       const isAuthenticated = localStorage.getItem("riseAuthenticated");
-      
-      // If authenticated, always redirect to curriculum (no special case for referrer)
       if (isAuthenticated === "true") {
         window.location.href = "/curriculum/curriculum.html";
       }
     };
-    
     function checkPassword() {
       const input = document.getElementById("passwordInput").value;
       if (input === correctPassword) {
-        // Save authentication status
         localStorage.setItem("riseAuthenticated", "true");
-        // Redirect to curriculum page with absolute path
         window.location.href = "/curriculum/curriculum.html";
       } else {
         document.getElementById("error").innerText = "Incorrect password.";
       }
     }
-    
-    // Allow pressing Enter to submit
     document.getElementById("passwordInput").addEventListener("keypress", function(event) {
       if (event.key === "Enter") {
         checkPassword();
       }
     });
   </script>
+  -->
 </body>
 </html>
