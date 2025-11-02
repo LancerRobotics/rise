@@ -24,6 +24,106 @@
     body {
       margin: 0;
       padding: 0;
+      background-color: #f2ebc7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero_area {
+      flex-shrink: 0;
+    }
+
+    .learn-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .button-container {
+      text-align: center;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .button-container h1 {
+      font-family: 'Merriweather Sans', sans-serif;
+      color: #000000;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .button-container p {
+      color: #444;
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+    }
+
+    .learn-buttons {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .learn-btn {
+      display: inline-block;
+      padding: 40px 60px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-family: 'Merriweather Sans', sans-serif;
+      text-transform: uppercase;
+      background-color: #ffffff;
+      border: 3px solid #D6CFAF;
+      border-radius: 15px;
+      color: #000000;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      min-width: 250px;
+    }
+
+    .learn-btn:hover {
+      background-color: #D6CFAF;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .learn-btn:active {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .button-container h1 {
+        font-size: 2rem;
+      }
+
+      .button-container p {
+        font-size: 1rem;
+      }
+
+      .learn-btn {
+        padding: 30px 40px;
+        font-size: 1.5rem;
+        min-width: 200px;
+      }
+
+      .learn-buttons {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .learn-btn {
+        padding: 25px 35px;
+        font-size: 1.3rem;
+        min-width: 180px;
+      }
     }
   </style>
 </head>
@@ -55,7 +155,7 @@
                   <a class="nav-link" href="ourteam.html">Our Team</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="curriculum/curriculum.html">Learn <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="learn.html">Learn <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="index.html#contact-us">Contact Us</a>
@@ -67,6 +167,19 @@
       </div>
     </header>
   </div>
+
+  <!-- Learn Content Section -->
+  <section class="learn-content">
+    <div class="button-container">
+      <h1>Choose Your Learning Path</h1>
+      <p>Select whether you want to learn about building robots or coding them!</p>
+      
+      <div class="learn-buttons">
+        <a href="curriculum/build.html" class="learn-btn">Build</a>
+        <a href="curriculum/curriculum.html" class="learn-btn">Code</a>
+      </div>
+    </div>
+  </section>
 
   <!-- info section -->
   <section class="info_section">
@@ -89,62 +202,8 @@
     </div>
   </section>
 
-  <!-- Password-protected section commented out -->
-  <!--
-  <section class="login_section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8">
-          <div id="loginBox">
-            <h2>Enter Password to Access Learn Materials</h2>
-            <input type="password" id="passwordInput" placeholder="Password">
-            <br>
-            <button onclick="checkPassword()">Submit</button>
-            <p id="error"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
-
-  <!-- You can now link directly to your learning materials here -->
-  <section class="learn_section">
-    <div class="container">
-      <h2>Welcome to the Learn Materials</h2>
-      <p><a href="/curriculum/curriculum.html">Click here to access the curriculum</a></p>
-    </div>
-  </section>
-
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
-
-  <!-- Commented out password script -->
-  <!--
-  <script>
-    const correctPassword = "RISE2025";
-    window.onload = function() {
-      const isAuthenticated = localStorage.getItem("riseAuthenticated");
-      if (isAuthenticated === "true") {
-        window.location.href = "/curriculum/curriculum.html";
-      }
-    };
-    function checkPassword() {
-      const input = document.getElementById("passwordInput").value;
-      if (input === correctPassword) {
-        localStorage.setItem("riseAuthenticated", "true");
-        window.location.href = "/curriculum/curriculum.html";
-      } else {
-        document.getElementById("error").innerText = "Incorrect password.";
-      }
-    }
-    document.getElementById("passwordInput").addEventListener("keypress", function(event) {
-      if (event.key === "Enter") {
-        checkPassword();
-      }
-    });
-  </script>
-  -->
 </body>
 </html>
