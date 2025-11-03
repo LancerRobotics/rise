@@ -61,6 +61,53 @@
       opacity: 0.85;
     }
 
+    .carousel-caption {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 30px;
+      border-radius: 5px;
+      max-width: 80%;
+    }
+
+    .carousel-caption h3 {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .carousel-caption p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .carousel-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-dot.active {
+      background: white;
+    }
+
     .carousel-arrow {
       position: absolute;
       top: 50%;
@@ -87,7 +134,224 @@
       right: 20px;
     }
 
-    .carousel-nav {
-      position: absolute;
-      bottom: 15px;
-     
+    @media (max-width: 768px) {
+      .image-carousel {
+        height: 350px;
+      }
+
+      .carousel-caption h3 {
+        font-size: 18px;
+      }
+
+      .carousel-caption p {
+        font-size: 14px;
+      }
+
+      .carousel-arrow {
+        font-size: 20px;
+        padding: 10px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section -->
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>RISE</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ourteam.html">Our Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="learn.html">Learn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact-us">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Image Carousel -->
+    <div class="image-carousel">
+      <div class="carousel-slides">
+        <div class="carousel-slide">
+          <img src="images/home1.JPG" alt="RISE Robotics Program">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/home2.JPG" alt="RISE Students Learning">
+        </div>
+      </div>
+
+      <button class="carousel-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-arrow next" onclick="moveSlide(1)">&#10095;</button>
+
+      <div class="carousel-nav">
+        <span class="carousel-dot active" onclick="currentSlide(0)"></span>
+        <span class="carousel-dot" onclick="currentSlide(1)"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- feature section -->
+  <section class="feature_section">
+    <div class="container">
+      <div class="feature_container">
+        <div class="box" onclick="window.location.href='#about-us'">
+          <div class="img-box">
+            <!-- About Us SVG -->
+            <svg enable-background="new 0 0 511.995 511.995" height="80" viewBox="0 0 511.995 511.995" width="80"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m217.106 280.749-48.214 48.214c-3.905 3.905-3.905 10.237 0 14.143 1.953 1.953 4.512 2.929 7.071 2.929s5.119-.976 7.071-2.929l48.214-48.214c3.905-3.905 3.905-10.237 0-14.143s-10.237-3.905-14.142 0z" />
+              <path
+                d="m328.915 168.939-48.17 48.17c-3.905 3.905-3.905 10.237 0 14.143 1.953 1.953 4.512 2.929 7.071 2.929s5.118-.976 7.071-2.929l48.17-48.17c3.905-3.905 3.905-10.237 0-14.143-3.905-3.905-10.235-3.905-14.142 0z" />
+            </svg>
+          </div>
+          <h5 class="name">About Us</h5>
+        </div>
+
+        <div class="box" onclick="window.location.href='#support-us'">
+          <div class="img-box">
+            <!-- Support Us SVG -->
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M15.583 1.41995C16.895 1.86149 17.7501 3.09602 17.7501 4.71455C17.7501 5.73209 17.1716 6.66866 16.527 7.41588C15.8644 8.184 15.0257 8.8733 14.2921 9.40806C13.4866 9.99659 12.8992 10.4258 12.0001 10.4258C11.1009 10.4258 10.5135 9.99659 9.80154 9.47634C8.97441 8.87329 8.13575 8.18399 7.47311 7.41587C6.82851 6.66865 6.25006 5.73209 6.25006 4.71456C6.25006 3.09603 7.10508 1.8615 8.41713 1.41996C9.5362 1.04335 10.8388 1.29193 12.0001 2.13723C13.1613 1.29193 14.4639 1.04335 15.583 1.41995Z"
+                fill="#1C274C" />
+            </svg>
+          </div>
+          <h5 class="name">Support Us</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end feature section -->
+
+  <!-- about section -->
+  <section class="about_section layout_padding-bottom" id="about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="detail-box">
+            <h2 style="margin-bottom: 25px;">About us</h2>
+            <p>
+              RISE is a student-led initiative bringing robotics education to young learners at the
+              <a style="all:initial; cursor:inherit; color:blue; text-decoration: underline;"
+                href="https://graceinitiative.org/">GRACE Academic Center</a> in Kisii, Kenya, in collaboration with
+              the nonprofit organization TEEEM. We've raised about $5,500 to provide VEX-IQ kits sufficient for 40
+              students, with 24 students currently actively participating in the program.
+            </p>
+            <a href="about.html">Read More</a>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6">
+          <div class="img-box">
+            <img src="images/teeem.webp" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+
+  <!-- Support Us section -->
+  <section class="professional_section layout_padding support_us" id="support-us">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="detail-box" style="display: flex; flex-direction: column; align-items: center; align-self: center;">
+            <div style="width:100%">
+              <h2>Support Us</h2>
+            </div>
+            <div class="row align-items-center">
+              <div class="col-lg-4 col-md-5">
+                <div class="detail-box text">
+                  <p>Help us bring robotics education to Kenya! Your support enables us to provide VEX-IQ kits and create a sustainable STEM curriculum for students at the GRACE Academic Center.</p>
+                  <br>
+                  <p>With your help, we can provide students with hands-on STEM learning through robotics. 100% of funds raised will go toward purchasing a VEX IQ Classroom Bundle, equipping students with everything they need to build, program, and compete with their own robots.</p>
+                </div>
+                <a onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">Donate Here</a>
+              </div>
+              <div class="col-lg-8 col-md-7">
+                <div class="img-box">
+                  <img
+                    src="https://images.givelively.org/nonprofits/da121b0f-b89e-483e-84e7-005a0369c7b9/campaigns/millburn-rise-robotics-in-schools-everywhere/background_images/millburn-rise-robotics-in-schools-everywhere_processed_03a2faabbd4189040ce72217041b74b7e4396c13cc1be8bb8087b80a4b39ded6_background_image.png"
+                    alt="Donate Here!"
+                    onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end Support Us section -->
+
+  <!-- footer section -->
+  <footer class="footer_section" id="contact-us">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> RISE | Built with ❤️ by the RISE Team
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+    // Image Carousel Script
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    function showSlide(index) {
+      if (index >= slides.length) currentIndex = 0;
+      else if (index < 0) currentIndex = slides.length - 1;
+      else currentIndex = index;
+
+      const offset = -currentIndex * 100;
+      document.querySelector('.carousel-slides').style.transform = `translateX(${offset}%)`;
+
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentIndex].classList.add('active');
+    }
+
+    function moveSlide(step) {
+      showSlide(currentIndex + step);
+    }
+
+    function currentSlide(index) {
+      showSlide(index);
+    }
+
+    setInterval(() => moveSlide(1), 5000); // Auto-slide every 5 seconds
+  </script>
+</body>
+</html>
