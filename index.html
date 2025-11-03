@@ -152,6 +152,11 @@
         padding: 10px 15px;
       }
     }
+
+    /* Shift the feature buttons down */
+    .feature_section {
+      padding-top: 60px;
+    }
   </style>
 </head>
 
@@ -308,50 +313,4 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- end Support Us section -->
-
-  <!-- footer section -->
-  <footer class="footer_section" id="contact-us">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> RISE | Built with ❤️ by the RISE Team
-      </p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script>
-    // Image Carousel Script
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-
-    function showSlide(index) {
-      if (index >= slides.length) currentIndex = 0;
-      else if (index < 0) currentIndex = slides.length - 1;
-      else currentIndex = index;
-
-      const offset = -currentIndex * 100;
-      document.querySelector('.carousel-slides').style.transform = `translateX(${offset}%)`;
-
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[currentIndex].classList.add('active');
-    }
-
-    function moveSlide(step) {
-      showSlide(currentIndex + step);
-    }
-
-    function currentSlide(index) {
-      showSlide(index);
-    }
-
-    setInterval(() => moveSlide(1), 5000); // Auto-slide every 5 seconds
-  </script>
-</body>
-</html>
+     
