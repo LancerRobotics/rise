@@ -12,7 +12,6 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-
   <title>RISE</title> 
 
   <!-- slider stylesheet -->
@@ -28,12 +27,131 @@
   <link href="css/responsive.css" rel="stylesheet" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/rise-logo.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/rise-logo.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/rise-logo.png">
-<link rel="shortcut icon" href="images/rise-logo.png">
-<!-- https://www.figma.com/design/bH9kkWq3Uy2YDcXDogIyaH/Rise-Logo?m=auto&t=VEkLJ54ST0KvTQGn-1 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/rise-logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/rise-logo.png">
+  <link rel="shortcut icon" href="images/rise-logo.png">
 
+  <style>
+    /* Image Carousel Styles */
+    .image-carousel {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      background: #000;
+    }
 
+    .carousel-slides {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+      height: 100%;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 30px;
+      border-radius: 5px;
+      max-width: 80%;
+    }
+
+    .carousel-caption h3 {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .carousel-caption p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .carousel-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-dot.active {
+      background: white;
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.3);
+      color: white;
+      border: none;
+      font-size: 30px;
+      padding: 15px 20px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s;
+    }
+
+    .carousel-arrow:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .carousel-arrow.prev {
+      left: 20px;
+    }
+
+    .carousel-arrow.next {
+      right: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .image-carousel {
+        height: 350px;
+      }
+      
+      .carousel-caption h3 {
+        font-size: 18px;
+      }
+      
+      .carousel-caption p {
+        font-size: 14px;
+      }
+      
+      .carousel-arrow {
+        font-size: 20px;
+        padding: 10px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -44,9 +162,7 @@
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
-              <span>
-                 RISE
-              </span>
+              <span>RISE</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,34 +193,35 @@
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-6 ">
-            <div class="detail-box">
-              <h1>
-                Creating the Future <br>
-                with STEM at <span style="font-family: 'Rock Salt', 'Lato',sans-serif; margin-left: 10px;">RISE</span>!
-              </h1>
-              <p>
-              <!--  -->
-              </p>
-              <a href="#contact-us">
-                Contact Us
-              </a>
-            </div>
+
+    <!-- Image Carousel -->
+    <div class="image-carousel">
+      <div class="carousel-slides">
+        <div class="carousel-slide">
+          <img src="images/home1.JPG" alt="RISE Robotics Program">
+          <div class="carousel-caption">
+            <h3>Bringing Robotics to Kenya</h3>
+            <p>Empowering students at the GRACE Academic Center</p>
           </div>
-          <div class="col-md-6">
-            <div class="img-box">
-              <!--<img src="images/alex.JPG" alt="">-->
-              <img src="images/rise-logo.png" alt="">
-            </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="images/home2.JPG" alt="RISE Students Learning">
+          <div class="carousel-caption">
+            <h3>Creating the Future with STEM</h3>
+            <p>Student-led initiative transforming education</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- end slider section -->
+      
+      <button class="carousel-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-arrow next" onclick="moveSlide(1)">&#10095;</button>
+      
+      <div class="carousel-nav">
+        <span class="carousel-dot active" onclick="currentSlide(0)"></span>
+        <span class="carousel-dot" onclick="currentSlide(1)"></span>
+      </div>
+    </div>
+    <!-- End Image Carousel -->
   </div>
 
   <!-- feature section -->
@@ -124,72 +241,33 @@
               </g>
             </svg>
           </div>
-          <h5 class="name">
-            About Us
-          </h5>
-        </div>
-        <div class="box" onclick="window.location.href='#statistics'" style="display: none;">
-          <div class="img-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
-              <g id="paint-painted-paint_roller-home-house" data-name="paint-painted-paint roller-home-house">
-                <path d="M60.01,25.05a2.963,2.963,0,0,0,1.85-1.54l.21-.41a3.022,3.022,0,0,0-1.14-3.91L58,17.43V7.82A3,3,0,0,0,57,2H49a3.009,3.009,0,0,0-3,3,2.979,2.979,0,0,0,1.99,2.81v3.62L33.54,2.76a2.988,2.988,0,0,0-3.08,0L3.07,19.19A3.022,3.022,0,0,0,1.93,23.1l.21.41a2.963,2.963,0,0,0,1.85,1.54,2.923,2.923,0,0,0,.83.12A3.033,3.033,0,0,0,6,24.9V56H5a3,3,0,0,0,0,6H59a3,3,0,0,0,0-6H58V24.91A2.9,2.9,0,0,0,60.01,25.05ZM49,4h8a1,1,0,0,1,0,2H49a1,1,0,0,1,0-2Zm7,4v8.23l-6.01-3.6V8ZM40,60H5a1,1,0,0,1,0-2H40Zm6,0H42V50h4Zm1-12H45V42.03a1.028,1.028,0,0,1,.42-.82l5.32-3.8A2.991,2.991,0,0,0,52,34.97V32a3.009,3.009,0,0,0-3-3H48V28a1,1,0,0,0-1-1H44a3.009,3.009,0,0,0-3-3H19a3.009,3.009,0,0,0-3,3H13a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1h3a3.009,3.009,0,0,0,3,3h1v8a4,4,0,0,0,8,0V36h2a4,4,0,0,0,8,0h3a3.009,3.009,0,0,0,3-3h3a1,1,0,0,0,1-1V31h1a1,1,0,0,1,1,1v2.97a1.028,1.028,0,0,1-.42.82l-5.32,3.8A2.991,2.991,0,0,0,43,42.03V48H41a1,1,0,0,0-1,1v7H8V23.76L31.48,9.62a1.02,1.02,0,0,1,1.04,0L56,23.76V56H48V49A1,1,0,0,0,47,48ZM46,29v2H44V29Zm-4-2v6a1,1,0,0,1-1,1H38V26h3A1,1,0,0,1,42,27ZM29,30a3.009,3.009,0,0,0-3,3V44a2,2,0,0,1-4,0V26H36V36a2,2,0,0,1-4,0V33A3.009,3.009,0,0,0,29,30Zm1,3v1H28V33a1,1,0,0,1,2,0ZM20,26v8H19a1,1,0,0,1-1-1V27a1,1,0,0,1,1-1Zm-4,3v2H14V29ZM59,58a1,1,0,0,1,0,2H48V58ZM33.55,7.91a2.979,2.979,0,0,0-3.1,0L5.34,23.03a1.018,1.018,0,0,1-.8.1.972.972,0,0,1-.61-.51l-.21-.41A1.021,1.021,0,0,1,4.1,20.9L31.49,4.47a1,1,0,0,1,1.02,0L59.9,20.9a1.021,1.021,0,0,1,.38,1.31l-.21.41a.972.972,0,0,1-.61.51,1.018,1.018,0,0,1-.8-.1Z" />
-              </g>
-            </svg>
-          </div>
-          <h5 class="name">
-            Statistics
-          </h5>
+          <h5 class="name">About Us</h5>
         </div>
 
         <div class="box" onclick="window.location.href='#support-us'">
           <div class="img-box">
-            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M15.583 1.41995C16.895 1.86149 17.7501 3.09602 17.7501 4.71455C17.7501 5.73209 17.1716 6.66866 16.527 7.41588C15.8644 8.184 15.0257 8.8733 14.2921 9.40806C14.2607 9.43097 14.2295 9.45375 14.1986 9.47635C13.4866 9.99659 12.8992 10.4258 12.0001 10.4258C11.1009 10.4258 10.5135 9.99659 9.80154 9.47634C9.77061 9.45374 9.73944 9.43097 9.708 9.40805C8.97441 8.87329 8.13575 8.18399 7.47311 7.41587C6.82851 6.66865 6.25006 5.73209 6.25006 4.71456C6.25006 3.09603 7.10508 1.8615 8.41713 1.41996C9.5362 1.04335 10.8388 1.29193 12.0001 2.13723C13.1613 1.29193 14.4639 1.04335 15.583 1.41995ZM15.1046 2.84161C14.4525 2.62218 13.4802 2.76414 12.5076 3.65812C12.2206 3.92189 11.7795 3.92189 11.4925 3.65812C10.5199 2.76414 9.5476 2.62218 8.89556 2.84161C8.27008 3.0521 7.75006 3.65592 7.75006 4.71456C7.75006 5.18213 8.03458 5.77033 8.60889 6.43607C9.16518 7.08091 9.90138 7.69278 10.5916 8.19592C11.4347 8.81053 11.6351 8.92578 12.0001 8.92578C12.365 8.92578 12.5654 8.81054 13.4085 8.19593C14.0987 7.69279 14.8349 7.08093 15.3912 6.43609C15.9655 5.77034 16.2501 5.18213 16.2501 4.71455C16.2501 3.65592 15.73 3.0521 15.1046 2.84161ZM8.68397 14.448C10.5498 14.0865 12.5471 14.1676 14.1633 15.1316C14.3903 15.267 14.6031 15.4357 14.7888 15.6442C15.1646 16.0664 15.3588 16.5911 15.3679 17.1172C15.5592 16.9938 15.7508 16.8568 15.9454 16.7098L17.7526 15.3446C18.6572 14.6613 19.9718 14.6612 20.8765 15.3443C21.7125 15.9755 22.0457 17.1083 21.4473 18.0675C21.022 18.7493 20.3815 19.6922 19.7296 20.296C19.0707 20.9063 18.1329 21.4194 17.4236 21.7618C16.5621 22.1776 15.6316 22.4075 14.7269 22.5539C12.8777 22.8532 10.9535 22.8074 9.12505 22.4308C8.19064 22.2382 7.21961 22.1382 6.25999 22.1382H4.00006C3.58585 22.1382 3.25006 21.8024 3.25006 21.3882C3.25006 20.974 3.58585 20.6382 4.00006 20.6382H6.25999C7.3221 20.6382 8.39454 20.7487 9.42772 20.9616C11.0798 21.302 12.8202 21.343 14.4872 21.0732C15.3161 20.939 16.0901 20.7398 16.7715 20.4109C17.4549 20.081 18.2233 19.6466 18.7104 19.1955C19.2029 18.7393 19.7541 17.9477 20.1747 17.2736C20.3016 17.0701 20.284 16.7765 19.9727 16.5414C19.6029 16.2622 19.0264 16.2623 18.6567 16.5415L16.8496 17.9067C16.1281 18.4516 15.2402 19.0347 14.1388 19.2103C14.0276 19.2281 13.9119 19.2443 13.7918 19.2586C13.7345 19.2689 13.6749 19.2758 13.6133 19.2781C13.051 19.334 12.3998 19.347 11.6813 19.2791C11.2689 19.2402 10.9662 18.8743 11.0051 18.4619C11.0441 18.0495 11.41 17.7468 11.8223 17.7858C12.4498 17.845 13.0127 17.8319 13.4903 17.7829C13.5 17.7819 13.5096 17.7809 13.5192 17.7799C13.5392 17.7683 13.5697 17.7472 13.6096 17.7122C13.9291 17.4334 13.9576 16.9665 13.6684 16.6416C13.5951 16.5593 13.5049 16.4854 13.3949 16.4198C12.2138 15.7153 10.6363 15.5976 8.96927 15.9206C7.31174 16.2417 5.66497 16.9815 4.43392 17.8545C4.09604 18.0941 3.6279 18.0144 3.38828 17.6766C3.14867 17.3387 3.22833 16.8706 3.5662 16.6309C4.96457 15.6393 6.80866 14.8113 8.68397 14.448Z" fill="#1C274C"/>
-</svg>
-   
-            
-          </div>
-          <h5 class="name">
-            Support Us
-          </h5>
-        </div>
-
-        <div class="box" onclick="window.location.href='#stem'" style="display:none;">
-          <div class="img-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
-              <path d="M42 8h-4V4a2 2 0 0 0-4 0v4h-4V4a2 2 0 0 0-4 0v4h-4a2 2 0 0 0 0 4h2v16.3L9.6 51.6A10 10 0 0 0 18 64h28a10 10 0 0 0 8.4-12.4L42 28.3V12h2a2 2 0 0 0 0-4zM46 60H18a6 6 0 0 1-4.8-9.4L28 26.7V12h8v14.7l14.8 23.9A6 6 0 0 1 46 60z"/>
-              <circle cx="32" cy="38" r="4"/>
-              <circle cx="40" cy="48" r="3"/>
-              <circle cx="24" cy="48" r="3"/>
+            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.583 1.41995C16.895 1.86149 17.7501 3.09602 17.7501 4.71455C17.7501 5.73209 17.1716 6.66866 16.527 7.41588C15.8644 8.184 15.0257 8.8733 14.2921 9.40806C14.2607 9.43097 14.2295 9.45375 14.1986 9.47635C13.4866 9.99659 12.8992 10.4258 12.0001 10.4258C11.1009 10.4258 10.5135 9.99659 9.80154 9.47634C9.77061 9.45374 9.73944 9.43097 9.708 9.40805C8.97441 8.87329 8.13575 8.18399 7.47311 7.41587C6.82851 6.66865 6.25006 5.73209 6.25006 4.71456C6.25006 3.09603 7.10508 1.8615 8.41713 1.41996C9.5362 1.04335 10.8388 1.29193 12.0001 2.13723C13.1613 1.29193 14.4639 1.04335 15.583 1.41995ZM15.1046 2.84161C14.4525 2.62218 13.4802 2.76414 12.5076 3.65812C12.2206 3.92189 11.7795 3.92189 11.4925 3.65812C10.5199 2.76414 9.5476 2.62218 8.89556 2.84161C8.27008 3.0521 7.75006 3.65592 7.75006 4.71456C7.75006 5.18213 8.03458 5.77033 8.60889 6.43607C9.16518 7.08091 9.90138 7.69278 10.5916 8.19592C11.4347 8.81053 11.6351 8.92578 12.0001 8.92578C12.365 8.92578 12.5654 8.81054 13.4085 8.19593C14.0987 7.69279 14.8349 7.08093 15.3912 6.43609C15.9655 5.77034 16.2501 5.18213 16.2501 4.71455C16.2501 3.65592 15.73 3.0521 15.1046 2.84161ZM8.68397 14.448C10.5498 14.0865 12.5471 14.1676 14.1633 15.1316C14.3903 15.267 14.6031 15.4357 14.7888 15.6442C15.1646 16.0664 15.3588 16.5911 15.3679 17.1172C15.5592 16.9938 15.7508 16.8568 15.9454 16.7098L17.7526 15.3446C18.6572 14.6613 19.9718 14.6612 20.8765 15.3443C21.7125 15.9755 22.0457 17.1083 21.4473 18.0675C21.022 18.7493 20.3815 19.6922 19.7296 20.296C19.0707 20.9063 18.1329 21.4194 17.4236 21.7618C16.5621 22.1776 15.6316 22.4075 14.7269 22.5539C12.8777 22.8532 10.9535 22.8074 9.12505 22.4308C8.19064 22.2382 7.21961 22.1382 6.25999 22.1382H4.00006C3.58585 22.1382 3.25006 21.8024 3.25006 21.3882C3.25006 20.974 3.58585 20.6382 4.00006 20.6382H6.25999C7.3221 20.6382 8.39454 20.7487 9.42772 20.9616C11.0798 21.302 12.8202 21.343 14.4872 21.0732C15.3161 20.939 16.0901 20.7398 16.7715 20.4109C17.4549 20.081 18.2233 19.6466 18.7104 19.1955C19.2029 18.7393 19.7541 17.9477 20.1747 17.2736C20.3016 17.0701 20.284 16.7765 19.9727 16.5414C19.6029 16.2622 19.0264 16.2623 18.6567 16.5415L16.8496 17.9067C16.1281 18.4516 15.2402 19.0347 14.1388 19.2103C14.0276 19.2281 13.9119 19.2443 13.7918 19.2586C13.7345 19.2689 13.6749 19.2758 13.6133 19.2781C13.051 19.334 12.3998 19.347 11.6813 19.2791C11.2689 19.2402 10.9662 18.8743 11.0051 18.4619C11.0441 18.0495 11.41 17.7468 11.8223 17.7858C12.4498 17.845 13.0127 17.8319 13.4903 17.7829C13.5 17.7819 13.5096 17.7809 13.5192 17.7799C13.5392 17.7683 13.5697 17.7472 13.6096 17.7122C13.9291 17.4334 13.9576 16.9665 13.6684 16.6416C13.5951 16.5593 13.5049 16.4854 13.3949 16.4198C12.2138 15.7153 10.6363 15.5976 8.96927 15.9206C7.31174 16.2417 5.66497 16.9815 4.43392 17.8545C4.09604 18.0941 3.6279 18.0144 3.38828 17.6766C3.14867 17.3387 3.22833 16.8706 3.5662 16.6309C4.96457 15.6393 6.80866 14.8113 8.68397 14.448Z" fill="#1C274C"/>
             </svg>
           </div>
-          <h5 class="name">
-            STEM
-          </h5>
+          <h5 class="name">Support Us</h5>
         </div>
       </div>
     </div>
   </section>
-
   <!-- end feature section -->
 
   <!-- about section -->
-
   <section class="about_section layout_padding-bottom" id="about-us">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-md-6">
           <div class="detail-box">
-            <h2 style="margin-bottom: 25px;">
-              About us
-            </h2>
+            <h2 style="margin-bottom: 25px;">About us</h2>
             <p>
-              RISE is a student-led initiative bringing robotics education to young learners at the <a style="all:initial; cursor:inherit; color:blue; text-decoration: underline;" href="https://graceinitiative.org/">GRACE Academic Center</a> in Kisii, Kenya, in collaboration with the nonprofit organization TEEEM. We’ve raised about $5,500 to provide VEX-IQ kits sufficient for 40 students, with 24 students currently actively participating in the program...<br>
+              RISE is a student-led initiative bringing robotics education to young learners at the <a style="all:initial; cursor:inherit; color:blue; text-decoration: underline;" href="https://graceinitiative.org/">GRACE Academic Center</a> in Kisii, Kenya, in collaboration with the nonprofit organization TEEEM. We've raised about $5,500 to provide VEX-IQ kits sufficient for 40 students, with 24 students currently actively participating in the program...<br>
             </p>
-            <a href="about.html">
-              Read More
-            </a>
+            <a href="about.html">Read More</a>
           </div>
         </div>
         <div class="col-lg-7 col-md-6">
@@ -200,47 +278,22 @@
       </div>
     </div>
   </section>
-
   <!-- end about section -->
 
-
-  <!-- professional section -->
-
-  <section class="professional_section layout_padding" id="statistics" style="display:none;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="detail-box" style="align-content: center;">
-            <h2>
-              Statistics
-            </h2>
-            <p>
-              Placeholder here
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- Support Us section -->
   <section class="professional_section layout_padding support_us" id="support-us">
     <div class="container">
       <div class="row">
         <div>
           <div class="detail-box" style="display: flex; flex-direction: column; align-items: center; align-self: center;">
             <div style="width:100%">
-              <h2>
-                Support Us
-              </h2>
+              <h2>Support Us</h2>
             </div>
             <div class="row align-items-center">
               <div class="col-lg-4 col-md-5"> 
                 <div class="detail-box text">
                   <p>Help us bring robotics education to Kenya! Your support enables us to provide VEX-IQ kits and create a sustainable STEM curriculum for students at the GRACE Academic Center.</p>
-                    <br>
+                  <br>
                   <p>With your help, we can provide students with hands-on STEM learning through robotics. 100% of funds raised will go toward purchasing a VEX IQ Classroom Bundle, equipping students with everything they need to build, program, and compete with their own robots.</p>
                 </div>
                 <a onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">Donate Here</a>
@@ -249,181 +302,5 @@
                 <div class="img-box">
                   <img src="https://images.givelively.org/nonprofits/da121b0f-b89e-483e-84e7-005a0369c7b9/campaigns/millburn-rise-robotics-in-schools-everywhere/background_images/millburn-rise-robotics-in-schools-everywhere_processed_03a2faabbd4189040ce72217041b74b7e4396c13cc1be8bb8087b80a4b39ded6_background_image.png" 
                        alt="Donate Here!"
-                       onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'"
-                       >
+                       onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end professional section -->
-
-  <!-- service section -->
-
-  <section class="service_section layout_padding" id="stem" style="display:none;"> <!-- Currently disabled-->
-    <div class="container ">
-      <div class="heading_container heading_center">
-        <h2> STEM </h2>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/s1.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Technology
-              </h5>
-              <p>
-                placeholder (ideally talk about the robotics kits here)
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/vex-logo.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                VEX-IQ
-              </h5>
-              <p>
-                placeholder (talk about making VEX-IQ groups in Kenya)
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/s2.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Engineering
-              </h5>
-              <p>
-                placeholder
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="stem.html">
-          View More
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- end service section -->
-
-  <!-- contact section -->
-  <script src="js/email.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
-
-    const publicKey = "LhBca9oBylL3Kqd6E";
-
-    (function(){
-        emailjs.init({
-          publicKey: publicKey,
-        });
-    })();
-  </script>
-
-  <section class="contact_section layout_padding" id="contact-us">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Contact Us
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <form action="" style="color: black" onsubmit="sendMail()">
-            <div>
-              <input type="text" id="name" placeholder="Name" required/>
-            </div>
-            <div>
-              <input type="text" id="phone_number" placeholder="Phone Number" required/>
-            </div>
-            <div>
-              <input type="email" id="email" placeholder="Email" required/>
-            </div>
-            <div>
-              <textarea type="text" id="message" class="message-box" placeholder="Message" onkeydown="" required></textarea>
-            </div>
-            <div class="d-flex ">
-              <button type="submit">
-                SEND
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map">
-              <!--<div id="googleMap" style="width:100%;height:100%;"></div>-->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6047.783591871301!2d-74.31829382401253!3d40.720398437101395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ae7f07aba7d1%3A0xb53e40f56bec7189!2sMillburn%20High%20School!5e0!3m2!1sen!2sus!4v1738850124582!5m2!1sen!2sus" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-          <p style="text-align: left; margin-top: 100px;">462 Millburn Ave, Millburn, NJ 07041</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end contact section -->
-
-
-  <!-- info section -->
-  <section class="info_section ">
-    <div class="social-box">
-      <h4>
-        Follow Us
-      </h4>
-      <div class="box">
-        <a href="">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.instagram.com/rise.robotics/">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- end info_section -->
-
-
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
-
-
-</body>
-
-
-</html>
-
-
