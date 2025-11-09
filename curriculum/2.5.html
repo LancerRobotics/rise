@@ -1,28 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-track="code" data-lesson="5">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>RISE | Code — Lesson 5</title>
-  <link rel="stylesheet" type="text/css" href="../css/curriculum.css" />
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
-  <link href="../css/style.css" rel="stylesheet" />
-  <link href="../css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/curriculum.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
 </head>
 <body>
   <div class="hero_area">
     <header class="header_section">
       <div class="header_bottom">
         <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
             <a class="navbar-brand" href="../index.html"><span>RISE</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-              <span class=""></span>
-            </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ">
+              <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="../ourteam.html">Our Team</a></li>
@@ -39,137 +37,116 @@
   <section class="curriculum_section">
     <div class="container-fluid">
       <div class="row">
+        <!-- Sidebar -->
         <div class="col-md-3 lesson-sidebar">
           <div class="course-outline"><div id="sidebar"></div></div>
         </div>
+
+        <!-- Main -->
         <div class="col-md-9 main-content">
-          
-    <div class="video-container">
-      <h2>Lesson 5: Wait and Timing</h2>
-      <div class="video-description">
-        <div>
-          
-            <div>
-              <h3>Lesson Objectives</h3>
-              <ul>
-<li>Learn how the wait block works in VEXcode</li>
-<li>Use wait timing to control the pause between robot actions</li>
-</ul>
+          <div class="video-container">
+            <h2>Lesson 5: Wait and Timing</h2>
+
+            <div class="video-description">
+              <div>
+                <h3>Lesson Objectives</h3>
+                <ul>
+                  <li>Learn how the wait block works in VEXcode</li>
+                  <li>Use wait timing to control the pause between robot actions</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Lesson Overview</h3>
+                <p>In this lesson, students will learn how to use timed pauses in their programs using the “wait” block</p>
+              </div>
             </div>
-        
-        </div>
-        <div>
-          
-        </div>
-      </div>
-      
+
             <div>
               <h3>Materials Needed</h3>
               <ul>
-<li>Computers (1 per group)</li>
-<li>Basebots</li>
-<li>VEXcode IQ website</li>
-<li>Notebooks for each student</li>
-<li>Lesson Procedure</li>
-<li>1. Overview</li>
-<li></li>
-<li>In this lesson, students will learn how to use timed pauses in their programs using</li>
-<li>the “wait” block</li>
-<li>2.</li>
-</ul>
+                <li>Computers (1 per group)</li>
+                <li>Basebots</li>
+                <li><a target="_blank" href="https://codeiq.vex.com/">VEXcode IQ website</a></li>
+                <li>Notebooks for each student</li>
+              </ul>
             </div>
-        
-      
+
+            <div><h3>Lesson Procedure</h3></div>
+
             <div>
               <h3>Getting Started</h3>
               <ul>
-<li>Start a class discussion using the prompts below. Establish the real-world</li>
-<li>connection of using timed actions. Then, introduce them to the wait block in</li>
-<li>VEXcode found in the Logic section. Connect the real-world connection from before</li>
-<li>to the wait block, and explain how the wait block will pause the program for a</li>
-<li>number of seconds before continuing.</li>
-<li>Discussion Prompts:</li>
-<li></li>
-<li>Imagine you’re trying to make your robot do a dance. It would move</li>
-<li>forward, spin, wait a second, and then spin again. What happens if it doesn’t</li>
-<li>wait in the dance?</li>
-<li>Where in real life do you think timed actions are important?</li>
-<li>3.</li>
-</ul>
+                <li>Start a class discussion using the prompts below. Establish the real-world connection of using timed actions. Then, introduce them to the wait block in VEXcode found in the Logic section. Connect the real-world connection from before to the wait block, and explain how the wait block will pause the program for a number of seconds before continuing.</li>
+                <li>Discussion Prompts:
+                  <ul>
+                    <li>Imagine you’re trying to make your robot do a dance. It would move forward, spin, wait a second, and then spin again. What happens if it doesn’t wait in the dance?</li>
+                    <li>Where in real life do you think timed actions are important?</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-        
-      
+
             <div>
               <h3>Monitoring Progress</h3>
               <ul>
-<li>Allow the students to go through a series of tasks to increase their familiarity with</li>
-<li>the wait block</li>
-<li>Task 1:</li>
-<li>Ask the students to create a program where the bot will drive forward</li>
-<li>200mm, wait 3 seconds, and drive backward 200mm. The program should</li>
-<li>look similar to this:</li>
-<li>Task 2</li>
-<li>Now we are going to include turning. Using the logic from before, ask the</li>
-<li>students to create a program that makes the bot move in an L shape,</li>
-<li>starting at the top of the L and ending at the other end of the L. Remind the</li>
-<li>students to use wait blocks between each movement.</li>
-<li>The code should be something like :</li>
-<li>■  Drive forward for (x) mm</li>
-<li>■  Wait (x) seconds</li>
-<li>■  Turn left/right for (x) degrees</li>
-<li>■  Wait (x) seconds</li>
-<li>■  Drive forward for (x) mm</li>
-<li>4.</li>
-</ul>
+                <li>Allow the students to go through a series of tasks to increase their familiarity with the wait block</li>
+                <li>Task 1:
+                  <ul>
+                    <li>Ask the students to create a program where the bot will drive forward 200mm, wait 3 seconds, and drive backward 200mm. The program should look similar to this:</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- IMAGE 1 (left-aligned, no caption) -->
+              <img src="images/2.5/2.5.1.png" alt="example wait program" style="max-width:100%; height:auto; margin:10px 0;">
+
+              <ul>
+                <li>Task 2
+                  <ul>
+                    <li>Now we are going to include turning. Using the logic from before, ask the students to create a program that makes the bot move in an L shape, starting at the top of the L and ending at the other end of the L. Remind the students to use wait blocks between each movement.</li>
+                    <li>The code should be something like :
+                      <ul>
+                        <li>Drive forward for (x) mm</li>
+                        <li>Wait (x) seconds</li>
+                        <li>Turn left/right for (x) degrees</li>
+                        <li>Wait (x) seconds</li>
+                        <li>Drive forward for (x) mm</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+             
             </div>
-        
-      <div>
-        
+
             <div>
               <h3>Wrapping Up</h3>
               <ul>
-<li>Discussion questions:</li>
-<li>What are the beneﬁts of the “wait” block? What happens to the program</li>
-<li>without it?</li>
-<li>What challenges did you have with the program before adding the “wait”</li>
-<li>block? How did the “wait” block solve those problems?</li>
-</ul>
-            </div>
-        
-        
-            <div>
-              <h3>Assessment</h3>
-              <ul>
-<li>Students should know how and when to use the “wait” block</li>
-</ul>
-            </div>
-        
-        
-            <div>
-              <h3>Preparation for next class</h3>
-              <ul>
-<li>The next class will introduce sensors, so make sure no sensors are missing from</li>
-<li>the kits.</li>
-</ul>
-            </div>
-        
-      </div>
-      
-    </div>
-    
-        </div>
-      </div>
-    </div>
-  </section>
+                <li>Discussion questions: 
+                  <ul>
+                    <li>What are the benefits of the “wait” block? What happens to the program without it?</li>
+                    <li>What challenges did you have with the program before adding the “wait” block? How did the “wait” block solve those problems?</li>
+                  </ul>
+                </li>
+              </ul>
 
-  <section class="info_section ">
-    <div class="social-box">
-      <h4>Follow Us</h4>
-      <div class="box">
-        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/rise.robotics/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <div>
+                <h4>Assessment</h4>
+                <ul>
+                  <li>Students should know how and when to use the “wait” block</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Preparation for next class</h4>
+                <p>The next class will introduce sensors, so make sure no sensors are missing from the kits.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
