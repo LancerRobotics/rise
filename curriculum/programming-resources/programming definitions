@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Programming Definitions</title>
+
+  <link rel="stylesheet" href="../../css/curriculum.css" />
+  <link rel="stylesheet" href="../../css/bootstrap.css" />
+  <link rel="stylesheet" href="../../css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+</head>
+<body>
+  <div class="hero_area">
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="../../index.html"><span>RISE</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+              <span class=""></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../ourteam.html">Our Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../learn.html">Learn</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../index.html#contact-us">Contact Us</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <section class="curriculum_section">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 lesson-sidebar">
+          <div class="course-outline">
+            <h3 class="course-outline-title">Programming Resources</h3>
+            <div id="sidebar"></div>
+          </div>
+        </div>
+
+        <!-- Main -->
+        <div class="col-md-9 main-content">
+          <div class="video-container">
+            <div style="display:flex; gap:10px; align-items:center; margin-bottom:12px;">
+              <button class="btn btn-outline-secondary" onclick="history.back()">← Back</button>
+              <h2 style="margin:0;">Programming Definitions</h2>
+            </div>
+
+            <!-- You can paste/update the PDF text here; this is the structure we used earlier -->
+            <h3>Programming</h3>
+            <p>The process of giving a computer a set of specific, step-by-step instructions to perform a task or solve a problem. <em>Coding</em> is another word for programming.</p>
+
+            <h3>Code</h3>
+            <p>The actual instructions given to a computer.</p>
+            <ul><li>Code is written in a specialized programming language that the computer can understand.</li></ul>
+
+            <h3>Some real-life objects that use programming</h3>
+            <ul>
+              <li>Parts of cars</li><li>Smartphones</li><li>Calculators</li><li>And many more!</li>
+            </ul>
+
+            <h3>Programming Process</h3>
+            <p>The process used to program a computer to do a specific task.</p>
+            <ul>
+              <li>Have a clear idea of what you want the program to do.</li>
+              <li><strong>Step 1:</strong> Identify the problem or task — what does the robot need to accomplish?</li>
+              <li><strong>Step 2:</strong> Describe a series of actions that solves the problem (can be done using pseudocode, taught later).</li>
+              <li><strong>Step 3:</strong> Write your program — choose a programming language and describe what you want the computer to do.</li>
+              <li><strong>Step 4:</strong> Test and improve — debugging means finding and fixing errors (“bugs”).</li>
+              <li>Sometimes you’ll need to return to Step 2 to refine your actions.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="info_section">
+    <div class="social-box">
+      <h4>Follow Us</h4>
+      <div class="box">
+        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/rise.robotics/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="../../js/jquery-3.4.1.min.js"></script>
+  <script src="../../js/bootstrap.js"></script>
+  <script src="../../js/sidebar-resources.js"></script>
+  <script src="../../js/update_lesson_scroll.js"></script>
+</body>
+</html>

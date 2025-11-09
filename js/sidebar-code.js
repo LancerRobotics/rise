@@ -1,9 +1,3 @@
-
-
-
-
-
-
 const lessons = [
     { num: 0, file: 'code.html', title: 'Curriculum' },
     { num: 1, file: '2.1.html', title: 'What is idkasdjalsdkjalskdjalksdjalksd?' },
