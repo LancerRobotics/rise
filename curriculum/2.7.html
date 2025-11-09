@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" data-track="code" data-lesson="7">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>RISE | Code — Lesson 7</title>
+
+  <!-- curriculum stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../css/curriculum.css" />
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+  <!-- Custom styles -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/rise-logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/rise-logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/rise-logo.png">
+  <link rel="shortcut icon" href="../images/rise-logo.png">
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section -->
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="../index.html"><span>RISE</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+              <span class=""></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="../ourteam.html">Our Team</a></li>
+                <li class="nav-item active"><a class="nav-link" href="code.html">Learn</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#contact-us">Contact Us</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <section class="curriculum_section">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 lesson-sidebar">
+          <div class="course-outline">
+            <div id="sidebar"></div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="col-md-9 main-content">
+          <div class="video-container">
+            <h2 id="title">Lesson 7: Conditional Statements</h2>
+
+            <div class="video-description">
+              <div>
+                <h3>Lesson Objectives</h3>
+                <ul id="obj">
+                  <li>Learn how to use conditional statements &amp; how they work.</li>
+                  <li>How to utilize conditional statements in a robotics environment.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3>Materials Needed</h3>
+              <ul id="materials">
+                <li>Computers (1 per group)</li>
+                <li>Basebots, Distance sensor, and optical sensor.</li>
+                <li><a href="https://codeiq.vex.com/" target="_blank" rel="noopener">VexCode IQ Website</a></li>
+                <li>Notebooks for each student</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Lesson Procedure</h3>
+
+              <h4>1. Overview</h4>
+              <ul>
+                <li>This lesson is to help students understand the importance of conditional statements and when they should be used.</li>
+                <li>Also dive into nested conditionals and how to utilize them using different sensors.</li>
+              </ul>
+
+              <h4>2. Getting Started</h4>
+              <ul>
+                <li>Have students make their own if … then … statements without code at first.</li>
+                <li>Then, proceed with a group activity. Have them discuss two questions and write down their answers in their notebooks in pseudocode.</li>
+                <li>Question 1: How would you get a robot to clean a room using an if… then… format?<br/>
+                  <em>Looking for:</em> an answer that uses a clear, step-by-step process in which this “robot” has a single simple condition, which, when repeated, will result in the room being clean.
+                </li>
+                <li>Question 2: Make another robot with multiple if, then statements.<br/>
+                  <em>Looking for:</em> For the multiple if’s question, we are looking for answers that have more specific and simpler if conditions.
+                </li>
+                <li>Learning ability: We want students to break down complex problems into manageable if conditionals.</li>
+              </ul>
+
+              <h4>3. Monitoring Progress</h4>
+              <ul>
+                <li>Have students open <a href="https://codeiq.vex.com" target="_blank" rel="noopener">codeiq.vex.com</a>.</li>
+                <li>Have the students watch this <a href="https://www.youtube.com/watch?v=uKL38GKP0zE" target="_blank" rel="noopener">video</a>, and follow along.<br/>
+                  
+                </li>
+                <li>Ask: Why do you think that the “Forever” block mentioned in the video was necessary? When would you use the “Forever, If… Then…” in a robotics environment?</li>
+                <li>Elaborate more on the “Forever” block mentioned in the video, and why it is necessary for it to be there, instead of just one if condition.</li>
+                <li>Then, explain to them what “elseIf” means, and connect it back to what they wrote on their notebooks at the beginning of class. Then, show them how they can use an else if statement in block code.
+                  <ul>
+                    <li>It must be after an if block or another elseIf block</li>
+                    <li>Discussion question: What’s the difference between using elseIf and just using if again for the next block?<br/>
+                    <strong>Answer:</strong> The else if block will not run if one of the previous blocks ran, but the next block will run when using if.</li>
+                  </ul>
+                <img src="images/2.7/2.7.1.png" alt="Forever If Then example" style="max-width:100%;height:auto;margin:10px 0;">
+                </li>
+                <li>Introduce the students to the “Math” Section</li>
+                 <img src="images/2.7/2.7.2.png" alt="Nested If statement example" style="max-width:100%;height:auto;margin:10px 0;">
+                <li>The number comparisons should be pretty self-explanatory.</li>
+                <li>The “not” block gives the opposite value of the boolean given (true → false, false → true)</li>
+                <li>The “and” block will give true only if both booleans are true, and the “or” block only needs at least one of them to be true in order to return true</li>
+                <li>Don’t worry about all the other blocks.</li>
+                <li>Stress that these blocks return boolean values (true or false).</li>
+                <li>Lastly, explain the concept of nested if statements, using the Math operators to compare values and print something out in the console.
+                  <ul>
+                    <li>The inside if statement will only be tested if the first if statement is true.</li>
+                  </ul>
+                <img src="images/2.7/2.7.3.png" alt="Nested If statement example" style="max-width:100%;height:auto;margin:10px 0;">
+
+                <!-- Added Missing Paragraph -->
+                <li>Then, introduce a challenge for the students to do using the distance sensor and bumper switch, using what they learned about nested if statements, math comparisons, and sensors.
+                  <ul>
+                    <li>Challenge: Create your own “parking sensor” where if the distance sensor detects something closer than 30 mm, it prints out “Warning! Too close!” to the console and if the bumper switch is activated, it prints out “You’ve crashed!” to the console.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h4>4. Wrapping Up</h4>
+              <ul>
+                <li>Allow them to tweak different values in the conditional statements, such as the distance threshold for the warning message.</li>
+                <li>If there is enough time, allow them to use different sensors and combine information to print out different things in the console.</li>
+              </ul>
+
+              <h4>Assessment</h4>
+              <ul>
+                <li>Students should know how to use Math operators, both normal and nested if statements, else if statements, as well as the “else” statement.</li>
+              </ul>
+
+              <h4>Preparation for next class</h4>
+              <ul>
+                <li>The next class will introduce one of the most important concepts in programming, loops.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="https://codeiq.vex.com" target="_blank" rel="noopener">VEXcode IQ</a></li>
+                <li><a href="https://www.youtube.com/watch?v=uKL38GKP0zE" target="_blank" rel="noopener">YouTube: Conditional Statements (Blocks)</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="info_section ">
+    <div class="social-box">
+      <h4>Follow Us</h4>
+      <div class="box">
+        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/rise.robotics/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+  <script src="../js/lessons.js"></script>
+  <script src="../js/sidebar-code.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/header.js"></script>
+  <script src="../js/update_lesson_scroll.js"></script>
+
+  <script>
+    // Auto-fill title from lessons.js (optional)
+    (function(){
+      const n = document.documentElement.getAttribute('data-lesson');
+      const T = (window.RISE_LESSONS && window.RISE_LESSONS.code && window.RISE_LESSONS.code.titles && window.RISE_LESSONS.code.titles[n]) || 'Conditional Statements';
+      document.getElementById('title').textContent = `Lesson ${n}: ${T}`;
+    })();
+  </script>
+</body>
+</html>
