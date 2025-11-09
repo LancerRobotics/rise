@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" data-track="code" data-lesson="6">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>RISE | Code — Lesson 6</title>
+  <link rel="stylesheet" href="../css/curriculum.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="hero_area">
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="../index.html"><span>RISE</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="../ourteam.html">Our Team</a></li>
+                <li class="nav-item active"><a class="nav-link" href="code.html">Learn</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#contact-us">Contact Us</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <section class="curriculum_section">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 lesson-sidebar">
+          <div class="course-outline"><div id="sidebar"></div></div>
+        </div>
+
+        <!-- Main -->
+        <div class="col-md-9 main-content">
+          <div class="video-container">
+            <h2>Lesson 6: Sensors</h2>
+
+            <div class="video-description">
+              <div>
+                <h3>Lesson Objectives</h3>
+                <ul>
+                  <li>The purpose of this lesson is to explain how the different types of sensors utilized in VEXIQ work.   
+                    <ul>
+                      <li>Distance Sensor</li>
+                      <li>Color Sensor</li>
+                      <li>Gyro Sensor</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3>Materials Needed</h3>
+              <ul>
+                <li>Computers (1 per group)</li>
+                <li>Basebots w/ Sensors (distance, color, or gyro)</li>
+                <li><a target="_blank" href="https://codeiq.vex.com/">VEXcode IQ website</a></li>
+                <li>Notebooks for each student</li>
+              </ul>
+            </div>
+
+            <div><h3>Lesson Procedure</h3></div>
+
+            <div>
+              <h3>Overview</h3>
+              <ul>
+                <li>This lesson is to explain how sensors work and why they are necessary in the world of robotics.  </li>
+                <li>Reinforce how sensors make the robot’s movements a lot more accurate and precise.  </li>
+                <li>Explain why it is useful to be able to utilize Color and Distance Sensors.  </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Getting Started</h3>
+              <ul>
+                <li>Begin with a quick class discussion using the questions below to enforce the reasoning behind using sensors:  
+                  <ul>
+                    <li>What are some sensors you use every day?</li>
+                    <li>How do sensors help devices “know” what’s happening around them?</li>
+                  </ul>
+                </li>
+                <li>Explain input &amp; output and why that is useful/applies to robotics.  </li>
+                <li>Introduce the three sensors:  
+                  <ul>
+                    <li><a target="_blank" href="https://docs.google.com/presentation/d/1rtfF-hr22pM6Z7bOYpRhYOqzu77LYiOvV1iT_Z97v_k/edit?slide=id.p#slide=id.p">Sensors Slideshow</a><br/>I added transitions for the questions/images<br/>The slideshow is imagery/writing, but most of the explanation needs to be said aloud (the second slide has some notes at the bottom)</li>
+                  </ul>
+                </li>
+              </ul>
+
+              
+              <ul>
+                <li>The Distance Sensor, which measures how far objects are
+                  <ul>
+                    <li>Uses ultrasonic sound waves to measure how far away an object is. It reports distance in millimeters </li>
+                  </ul>
+                </li>
+                <li>The Color Sensor, which detects colors and light intensity
+                  <ul>
+                    <li>Detects the color of objects- is able to detect basic colors</li>
+                  </ul>
+                </li>
+                <li>The Gyro Sensor, which measures turning and orientation
+                  <ul>
+                    <li>Measures the robot's rotation in degrees- essential for accurate turning.  </li>
+                    <li>Also make sure to go over <a target="_blank" href="https://docs.google.com/document/d/1rQnOrUEOlO2xDdJATPbUlhx3pC1zMEZTpEjS_9RJVTQ/edit?tab=t.0">this document</a> on how to use a gyro sensor.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              
+              <ul>
+                <li>Next, using their computers, have the kids open the VEXIQ website.  </li>
+                <li>Show the students where the sensor commands are located in the toolbar and how to use them.  </li>
+                <img src="images/2.6/2.6.1.png" alt="example wait program" style="max-width:100%; height:auto; margin:10px 0;">
+                <img src="images/2.6/2.6.2.png" alt="example wait program" style="max-width:100%; height:auto; margin:10px 0;">
+              </ul>
+            </div>
+
+            <div>
+              <h3>Monitoring Progress</h3>
+              <ul>
+                <li><strong>Task 1: Gyro</strong>
+                  <ul>
+                    <li>Purpose: turn with precision</li>
+                    <li>Reset gyro before beginning activity</li>
+                    <li>Program the robot to:  
+                      <ul>
+                        <li>Drive forward 300 mm</li>
+                        <li>Turn exactly 90 degrees using the gyro</li>
+                        <li>Repeat 4 times to create a perfect square</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li><strong>Task 2: Distance Sensor</strong>
+                  <ul>
+                    <li>Using knowledge from previous lessons, program the robot to drive forward until the distance sensor detects an object (can be anything) within 100mm, then stop.  </li>
+                    <li>Challenge: Once stopped, use knowledge from Task 1 to have the robot execute a 180 degree turn.  </li>
+                  </ul>
+                </li>
+
+                <li><strong>Task 3: Color Sensor</strong>
+                  <ul>
+                    <li>Place a red object or a blue object in front of the robot.  </li>
+                    <li>Program the robot to drive forward (~200 mm)
+                      <ul>
+                        <li>If it detects red, turn 90 degrees to the left</li>
+                        <li>If it detects blue, turn 90 degrees to the right.  </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Wrapping Up</h3>
+              <ul>
+                <li>Have a group discussion:  
+                  <ul>
+                    <li>Which sensor was most helpful/interesting?  </li>
+                    <li>If you could add a new sensor to the robot, what would it do?  </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <div>
+                <h4>Assessment</h4>
+                <ul>
+                  <li>Students must be able to explain the purpose &amp; function of all three sensors</li>
+                  <li>They should be able to identify where to find the commands in the code.  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Preparation for next class</h4>
+                <p>The next class will introduce a new concept called conditional statements.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+  <script src="../js/sidebar-code.js"></script>
+  <script src="../js/update_lesson_scroll.js"></script>
+</body>
+</html>
