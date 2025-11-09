@@ -27,7 +27,7 @@ const lessons = [
 
 const currentFile = window.location.pathname.split('/').pop();
 
-let sidebarHTML = '<h3>Robotics</h3><ul class="lesson-list">';
+let sidebarHTML = '<h3>Code Curriculum</h3><ul class="lesson-list">';
 lessons.forEach(lesson => {
 const activeClass = lesson.file === currentFile ? 'active' : '';
 sidebarHTML += `
