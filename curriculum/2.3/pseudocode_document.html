@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Pseudocode Document (Lesson 2.3)</title>
+
+  <!-- paths are from curriculum/2.3/ -->
+  <link rel="stylesheet" href="../../css/curriculum.css" />
+  <link rel="stylesheet" href="../../css/bootstrap.css" />
+  <link rel="stylesheet" href="../../css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+</head>
+<body>
+  <div class="hero_area">
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="../../index.html"><span>RISE</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+              <span class=""></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../ourteam.html">Our Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="../code.html">Learn</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../index.html#contact-us">Contact Us</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <section class="curriculum_section">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left sidebar (simple per-lesson list) -->
+        <div class="col-md-3 lesson-sidebar">
+          <div class="course-outline">
+            <h3 class="course-outline-title">Lesson 2.3 Resources</h3>
+            <div id="sidebar">
+              <ul class="lesson-list">
+                <li class="active">
+                  <span class="lesson-number">1</span>
+                  <span class="lesson-title">Pseudocode Document</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="col-md-9 main-content">
+          <div class="video-container">
+            <div style="display:flex; gap:10px; align-items:center; margin-bottom:12px;">
+              <button class="btn btn-outline-secondary" id="backBtn">← Back</button>
+              <h2 style="margin:0;">Pseudocode Document</h2>
+            </div>
+
+            <!-- VERBATIM CONTENT -->
+            <p><strong>Pseudocode</strong> (pronounced soo-dow-kowd): A way of writing out the steps of a program in plain, simple language (not real code).</p>
+
+            <ul>
+              <li>“Pseudo” means fake, so it is essentially fake code</li>
+              <li>Its purpose is to give an outline of the steps needed for the program, which makes actually writing the program easier.</li>
+              <li>It can be written in plain english, but should follow a computer-like format, being very logical</li>
+            </ul>
+
+            <h3>Why is it important?</h3>
+            <ul>
+              <li>Imagine you need to write a very long and difficult program. If you jump straight into programming, you need to worry about how the blocks work, the formatting, and many little details. This can make you forget the bigger picture (what needs to happen, and in what order), especially in longer projects.</li>
+              <li>Pseudocode breaks up the big steps with the little details. You first make an outline, and then you just worry about the details, which can make the project much more manageable and organized.</li>
+            </ul>
+
+            <h3>Example:</h3>
+            <p><strong>Task:</strong> Make the robot go in a square of side length 200 mm.</p>
+            <p><strong>Pseudocode:</strong></p>
+            <pre style="white-space:pre-wrap; background:#f8f9fa; padding:12px; border-radius:8px; border:1px solid #e5e5e5;">
+Go forward 200 mm.
+Turn left 90 degrees.
+Go forward 200 mm.
+Turn left 90 degrees.
+Go forward 200 mm.
+Turn left 90 degrees.
+Go forward 200 mm.
+Turn left 90 degrees.
+            </pre>
+
+            <p>This traces out a square, and leaves the robot pointing in the same direction in the same starting place after running. However, notice how we just did the same thing 4 times. We have room to improve.</p>
+
+            <h3>Improved Pseudocode:</h3>
+            <pre style="white-space:pre-wrap; background:#f8f9fa; padding:12px; border-radius:8px; border:1px solid #e5e5e5;">
+Repeat 4 times:
+  Go forward 200 mm.
+  Turn left 90 degrees.
+            </pre>
+
+            <p>This does the exact same thing, but is much shorter. Optimizations such as these should be done during pseudocode, not when actually writing the program.</p>
+            <!-- END VERBATIM -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info_section">
+    <div class="social-box">
+      <h4>Follow Us</h4>
+      <div class="box">
+        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/rise.robotics/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Back button: prefer history, otherwise fall back to the lesson page.
+    (function () {
+      const ref = document.referrer || "";
+      const sameOrigin = ref && new URL(ref, location.href).origin === location.origin;
+      const fallback = "../2.3.html";
+      document.getElementById("backBtn").onclick = function () {
+        if (sameOrigin) history.back(); else location.href = fallback;
+      };
+    })();
+  </script>
+
+  <script src="../../js/jquery-3.4.1.min.js"></script>
+  <script src="../../js/bootstrap.js"></script>
+</body>
+</html>
