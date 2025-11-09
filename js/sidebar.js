@@ -1,5 +1,5 @@
 const lessons = [
-    { num: 0, file: 'curriculum.html', title: 'Curriculum' },
+    { num: 0, file: 'build.html', title: 'Curriculum' },
     { num: 1, file: '1.1.html', title: 'What is Robotics?' },
     { num: 2, file: '1.2.html', title: 'VEX IQ Kit Introduction' },
     { num: 3, file: '1.3.html', title: 'Basic Geometric Thinking and Reasoning' },
