@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href../about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="../ourteam.html">Our Team</a></li>
                 <li class="nav-item active"><a class="nav-link" href="code.html">Learn</a></li>
                 <li class="nav-item"><a class="nav-link" href="../index.html#contact-us">Contact Us</a></li>
@@ -71,66 +71,84 @@
               <div>
                 <h3>Lesson Objectives</h3>
                 <ul id="obj">
-                  <li>Understand programming’s role in robotics</li>
-                  <li>Recognize everyday examples of code</li>
-                  <li>Outline a simple problem-solving process for code</li>
+                  <li>Understand the basic concept of programming and its role in robotics</li>
+                  <li>Recognize where programming exists in our daily lives</li>
+                  <li>Learn the steps programmers follow to solve problems using code</li>
                 </ul>
               </div>
               <div>
                 <h3>Lesson Overview</h3>
-                <p id="ov1">Intro to what programming is and where it appears in daily life.</p>
-                <p id="ov2">Connect programming process to the Engineering &amp; Design process.</p>
+                <p id="ov1">The purpose of this lesson is to introduce students to the idea of programming, and how it can be used to make their robots more powerful. In addition, students will gain insight into how programming is used in their everyday lives. Finally, students will learn about the process programmers use to solve a problem, similar to the Engineering and Design process that they’ve learned about previously.</p>
+                <p id="ov2"></p>
               </div>
             </div>
 
             <div>
               <h3>Materials Needed</h3>
               <ul id="materials">
-                <li>Notebooks</li>
-                <li><a href="2.1/definitions.html">Definitions document</a></li>
+                <li>Notebooks for each student</li>
+                <li><a href="2.1/definitions.html">Programming Definitions document</a></li>
               </ul>
+            </div>
+
+            <div>
+              <h3>Lesson Procedure</h3>
             </div>
 
             <div>
               <h3>Getting Started</h3>
               <ul id="start">
-                <li>Whole-group discussion: what is programming? where do you see it?</li>
-                <li>How coding can make robots more capable.</li>
+                <li>Begin with a whole-group discussion about what the students think programming is, and where they’ve seen it in everyday objects. Then discuss how programming can help them build more powerful and advanced robots.</li>
+                <li>Discussion Prompts:
+                  <ul>
+                    <li>What do you think programming/coding is?</li>
+                    <li>Do you see any objects that use code in the classroom? In the school?</li>
+                    <li>Which objects use code, and which objects are purely mechanical? For example, do you think light bulbs and light switches use code? What about phones? Cars and motorcycles?</li>
+                    <li>How do you think coding can help make your robots better?</li>
+                  </ul>
+                </li>
               </ul>
             </div>
 
             <div>
               <h3>Monitoring Progress</h3>
               <ul id="monitor">
-                <li>Students take short notes; quick share-outs to gauge understanding.</li>
+                <li>Go through programming definitions with the entire class, introduce definitions of programming, real life examples, and the process which programmers use to accomplish a task</li>
+                <li>While going through the information, students should be taking notes in their notebooks. Make sure all students have enough time to get the important information down, they do not need to copy down every little detail.</li>
               </ul>
             </div>
 
             <div>
               <h3>Wrapping Up</h3>
               <ul id="wrap">
-                <li>Discussion: similarities to EDP; why debugging matters.</li>
+                <li>Come back together for a group discussion about the programming process.</li>
+                <li>Discussion Prompts:
+                  <ul>
+                    <li>How is this similar to the Engineering and Design process?</li>
+                    <li>Why is knowing how to debug your code important?</li>
+                  </ul>
+                </li>
               </ul>
 
               <div>
                 <h4 style="color:#36454F">Assessment</h4>
                 <ul id="assess">
-                  <li>Explain programming</li>
-                  <li>List three code-driven objects</li>
-                  <li>Describe a programmer workflow</li>
+                  <li>Students can explain what programming is and how it is important</li>
+                  <li>Students can name at least three objects that use code in everyday life</li>
+                  <li>Students can describe the process that programmers use and the importance of each step.</li>
                 </ul>
               </div>
 
               <div>
                 <h4 style="color:#36454F">Preparation for next class</h4>
-                <p id="prep">Next: tour codeiq.vex.com (Blocks).</p>
+                <p id="prep">Next class will be much more hands-on. Students will go on the computers and experiment with the website that will be used throughout the entire course. Prepare an open and flat area, as students will run a simple code that makes their robot go forward. If the basebots were disassembled from the end of the previous course, take some time in the beginning of the lesson to reassemble the basebots.</p>
               </div>
             </div>
 
             <div>
               <h3>Resources</h3>
               <div class="video-wrapper">
-                <!-- Add optional code lesson video links later -->
+                <!-- (none for this lesson) -->
               </div>
             </div>
           </div>
@@ -161,14 +179,16 @@
   <script src="../js/update_lesson_scroll.js"></script>
 
   <script>
-    // Auto-fill title & optional body from lessons.js
+    // Keep your auto-fill logic, but ensure lessons.js doesn't overwrite this page
     (function(){
       const n = document.documentElement.getAttribute('data-lesson');
+      if (!window.RISE_LESSONS || !window.RISE_LESSONS.code || !window.RISE_LESSONS.code.bodies || !window.RISE_LESSONS.code.bodies[n]) {
+        return; // nothing to overwrite
+      }
+      // If you prefer verbatim to stay, comment out everything below:
       const T = (window.RISE_LESSONS.code.titles[n] || 'Lesson');
       document.getElementById('title').textContent = `Lesson ${n}: ${T}`;
-
-      const L = (window.RISE_LESSONS.code.bodies && window.RISE_LESSONS.code.bodies[n]) || null;
-      if (!L) return;
+      const L = window.RISE_LESSONS.code.bodies[n];
       const listFill = (id, items) => {
         const el = document.getElementById(id); if (!el || !items) return;
         el.innerHTML = ''; items.forEach(s => { const li = document.createElement('li'); li.textContent = s; el.appendChild(li); });
@@ -177,16 +197,15 @@
         if (!arr) return;
         ids.forEach((id, idx) => { const el = document.getElementById(id); if (el && arr[idx]) el.textContent = arr[idx]; });
       };
-
-      if (L.objectives) listFill('obj', L.objectives);
-      if (L.materials) listFill('materials', L.materials);
-      if (L.getting_started) listFill('start', L.getting_started);
-      if (L.monitoring) listFill('monitor', L.monitoring);
-      if (L.wrapping_up) listFill('wrap', L.wrapping_up);
-      if (L.assessment) listFill('assess', L.assessment);
-      if (L.prep_next) document.getElementById('prep').textContent = (Array.isArray(L.prep_next)?L.prep_next[0]:L.prep_next);
-
-      if (L.overview) parasFill(['ov1','ov2'], L.overview);
+      // Comment these out to prevent overrides:
+      // if (L.objectives) listFill('obj', L.objectives);
+      // if (L.materials) listFill('materials', L.materials);
+      // if (L.getting_started) listFill('start', L.getting_started);
+      // if (L.monitoring) listFill('monitor', L.monitoring);
+      // if (L.wrapping_up) listFill('wrap', L.wrapping_up);
+      // if (L.assessment) listFill('assess', L.assessment);
+      // if (L.prep_next) document.getElementById('prep').textContent = (Array.isArray(L.prep_next)?L.prep_next[0]:L.prep_next);
+      // if (L.overview) parasFill(['ov1','ov2'], L.overview);
     })();
   </script>
 </body>
