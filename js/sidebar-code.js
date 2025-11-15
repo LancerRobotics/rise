@@ -19,7 +19,7 @@ const lessons = [
     { num: 16, file: '2.16.html',   title: 'Competition Prep' },
     { num: 17, file: '2.17.html',   title: 'Field Testing and Data Logging' },
     { num: 18, file: '2.18.html',   title: 'Project Documentation' },
-    { num: 29, file: '2.19.html',   title: 'Final Challenge: Design + Code' },
+    { num: 19, file: '2.19.html',   title: 'Final Challenge: Design + Code' },
     { num: 20, file: '2.20.html',   title: 'Reflection and Presentation' },
     { num: 21, file: '2.21.html',   title: 'Advanced Sensor Control' },
     { num: 22, file: '2.22.html',   title: 'Programming with Functions' },
