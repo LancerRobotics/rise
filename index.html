@@ -88,13 +88,13 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(168, 0, 0, 0.5);
       cursor: pointer;
       transition: background 0.3s;
     }
 
     .carousel-dot.active {
-      background: white;
+      background: rgb(0, 0, 0);
     }
 
     .carousel-arrow {
@@ -241,35 +241,32 @@
   <!-- feature section -->
   <section class="feature_section">
     <div class="container">
-      <div class="feature_container">
-        <div class="box" onclick="window.location.href='#about-us'">
+      <div class="feature_container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+
+       <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           <div class="img-box">
-            <!-- About Us SVG -->
-            <svg enable-background="new 0 0 511.995 511.995" height="80" viewBox="0 0 511.995 511.995" width="80"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="m217.106 280.749-48.214 48.214c-3.905 3.905-3.905 10.237 0 14.143 1.953 1.953 4.512 2.929 7.071 2.929s5.119-.976 7.071-2.929l48.214-48.214c3.905-3.905 3.905-10.237 0-14.143s-10.237-3.905-14.142 0z" />
-              <path
-                d="m328.915 168.939-48.17 48.17c-3.905 3.905-3.905 10.237 0 14.143 1.953 1.953 4.512 2.929 7.071 2.929s5.118-.976 7.071-2.929l48.17-48.17c3.905-3.905 3.905-10.237 0-14.143-3.905-3.905-10.235-3.905-14.142 0z" />
-            </svg>
+            <h2 style="font-size: 48px; font-weight: 700; margin: 0;">$6000</h2>
           </div>
-          <h5 class="name">About Us</h5>
+         <h5 class="name" style="margin-top: 10px;">Raised</h5>
         </div>
 
-        <div class="box" onclick="window.location.href='#support-us'">
-          <div class="img-box">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M15.583 1.41995C16.895 1.86149 17.7501 3.09602 17.7501 4.71455C17.7501 5.73209 17.1716 6.66866 16.527 7.41588C15.8644 8.184 15.0257 8.8733 14.2921 9.40806C13.4866 9.99659 12.8992 10.4258 12.0001 10.4258C11.1009 10.4258 10.5135 9.99659 9.80154 9.47634C8.97441 8.87329 8.13575 8.18399 7.47311 7.41587C6.82851 6.66865 6.25006 5.73209 6.25006 4.71456C6.25006 3.09603 7.10508 1.8615 8.41713 1.41996C9.5362 1.04335 10.8388 1.29193 12.0001 2.13723C13.1613 1.29193 14.4639 1.04335 15.583 1.41995Z"
-                fill="#1C274C" />
-            </svg>
-          </div>
-          <h5 class="name">Support Us</h5>
+        <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <div class="img-box">
+           <h2 style="font-size: 48px; font-weight: 700; margin: 0;">90</h2>
+         </div>
+         <h5 class="name" style="margin-top: 10px;">Students</h5>
         </div>
+
+        <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          <div class="img-box">
+            <h2 style="font-size: 48px; font-weight: 700; margin: 0;">6</h2>
+          </div>
+          <h5 class="name" style="margin-top: 10px;">Schools in Kenya</h5>
+        </div>
+
       </div>
-    </div>
-  </section>
+  </div>
+  </section>    
 
   <!-- about section -->
   <section class="about_section layout_padding-bottom" id="about-us">
