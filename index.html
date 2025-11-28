@@ -462,12 +462,20 @@ function animateCountUp() {
             const eased = 1 - Math.pow(1 - progress, 3);
 
             const value = Math.floor(startVal + (eased * target));
-            counter.textContent = value;
+            if (counter.getAttribute("data-target") === "6000") {
+              counter.textContent = "$" + value;
+            } else {
+              counter.textContent = value;
+          }
 
             if (progress < 1) {
                 requestAnimationFrame(update);
             } else {
+                if (counter.getAttribute("data-target") === "6000") {
+                  counter.textContent = "$" + target;
+                } else {
                 counter.textContent = target;
+                }
             }
         }
 
