@@ -144,7 +144,7 @@
 
     .feature_section {
       padding-top: 60px;
-      padding-bottom: 60px;
+      padding-bottom: 0px;
     }
   </style>
 </head>
@@ -264,24 +264,89 @@
 </section>
 
 <!-- Featured In Section -->
-<section class="featured_section" style="padding: 40px 0; text-align: center;">
-  <h3 style="font-weight: 700; margin-bottom: 25px;">Featured In</h3>
+<section class="featured_section" style="padding: 60px 0; text-align: center;">
+  <h2 style="font-weight: 700; margin-bottom: 40px;">Featured In</h2>
 
-  <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+  <div style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  ">
 
+    <!-- CARD 1 -->
     <a href="https://www.tapinto.net/towns/millburn-slash-short-hills/sections/giving-back/articles/millburn-high-school-students-raise-over-5-500-purchase-robotics-kits-for-40-kenyan-students-train-teachers"
-       style="font-size: 18px; text-decoration: underline; color: #0000EE;" target="_blank">
-       TAPinto: Millburn Students Raise $5,500 for Kenya Robotics Kits
+       target="_blank"
+       style="text-decoration: none; color: inherit;">
+      <div style="
+        width: 320px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.2s;
+      " onmouseover="this.style.transform='scale(1.03)'"
+        onmouseout="this.style.transform='scale(1)'">
+
+        <img src="images/articleImage1.jpg" style="width:100%; height: 270px; object-fit: cover;" alt="Article image">
+
+        <div style="padding: 20px;">
+          <h4 style="font-weight: 700;">Millburn Students Raise $5,500</h4>
+          <p style="margin-top: 10px; color: #444;">
+            TAPinto article covering RISE students fundraising for robotics education in Kenya.
+          </p>
+        </div>
+      </div>
     </a>
 
+    <!-- CARD 2 -->
     <a href="https://www.tapinto.net/towns/millburn-slash-short-hills/sections/giving-back/articles/3-millburn-high-school-students-are-fundraising-to-provide-stem-equipment-for-students-in-kenya"
-       style="font-size: 18px; text-decoration: underline; color: #0000EE;" target="_blank">
-       TAPinto: Students Fundraise for STEM Equipment in Kenya
+       target="_blank"
+       style="text-decoration: none; color: inherit;">
+      <div style="
+        width: 320px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.2s;
+      " onmouseover="this.style.transform='scale(1.03)'"
+        onmouseout="this.style.transform='scale(1)'">
+
+        <img src="images/articleImage2.jpg" style="width: 100%; height: 270px; object-fit: cover;" alt="Article image">
+
+        <div style="padding: 20px;">
+          <h4 style="font-weight: 700;">Fundraising for STEM Equipment</h4>
+          <p style="margin-top: 10px; color: #444;">
+            TAPinto article about expanding robotics access for Kenyan students.
+          </p>
+        </div>
+      </div>
     </a>
 
+    <!-- CARD 3 -->
     <a href="https://www.linkedin.com/posts/teeemglobal_robotics-stem-education-activity-7374170711533178881-Oo12/"
-       style="font-size: 18px; text-decoration: underline; color: #0000EE;" target="_blank">
-       LinkedIn Video: TEEEM Robotics & STEM Education Feature
+       target="_blank"
+       style="text-decoration: none; color: inherit;">
+      <div style="
+        width: 320px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.2s;
+      " onmouseover="this.style.transform='scale(1.03)'"
+        onmouseout="this.style.transform='scale(1)'">
+
+        <img src="images/articleImage3.jpg" style="width: 100%; height: 270px; object-fit: cover;" alt="Video preview">
+
+        <div style="padding: 20px;">
+          <h4 style="font-weight: 700;">TEEEM Robotics Video</h4>
+          <p style="margin-top: 10px; color: #444;">
+            Video feature showcasing the impact of RISE and TEEEM in Kenya.
+          </p>
+        </div>
+      </div>
     </a>
 
   </div>
