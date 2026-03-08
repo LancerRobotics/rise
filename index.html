@@ -196,7 +196,7 @@
     
 <!-- Image Carousel -->
 <div class="image-carousel">
-    <div class="carousel-slides">
+    <div class="carousel-slides" id="carouselTrack">
 
         <div class="carousel-slide">
             <img src="images/home1.JPG" alt="RISE Robotics Program">
@@ -494,46 +494,65 @@
 
 <!-- Carousel Script -->
 <script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".carousel-slide");
+  // Seamless infinite loop using cloned first/last slides.
+  // Track order: [clone of last] [slide1] [slide2] ... [slideN] [clone of first]
+
+  const track = document.getElementById("carouselTrack");
   const dots = document.querySelectorAll(".carousel-dot");
+  const realSlides = Array.from(track.querySelectorAll(".carousel-slide"));
+  const total = realSlides.length;
 
-  function showSlide(index) {
-    if (index >= slides.length) slideIndex = 0;
-    else if (index < 0) slideIndex = slides.length - 1;
-    else slideIndex = index;
+  // Clone first and last slides and insert them
+  const firstClone = realSlides[0].cloneNode(true);
+  const lastClone = realSlides[total - 1].cloneNode(true);
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, realSlides[0]);
 
-    const offset = -slideIndex * 100;
-    document.querySelector(".carousel-slides").style.transform = `translateX(${offset}%)`;
+  let current = 1;
+  let isTransitioning = false;
 
+  function goTo(index, animate) {
+    track.style.transition = animate === false ? "none" : "transform 0.8s ease-in-out";
+    track.style.transform = `translateX(-${index * 100}%)`;
+    current = index;
+
+    const dotIndex = (index - 1 + total) % total;
     dots.forEach(dot => dot.classList.remove("active"));
-    dots[slideIndex].classList.add("active");
+    dots[dotIndex].classList.add("active");
   }
 
-  function resetTimer() {
-    clearInterval(autoSlide);
-    autoSlide = setInterval(() => {
-      moveSlide(1);
-    }, 5000);
-  }
+  track.addEventListener("transitionend", () => {
+    if (current === 0) {
+      goTo(total, false);
+    } else if (current === total + 1) {
+      goTo(1, false);
+    }
+    isTransitioning = false;
+  });
 
   function moveSlide(step) {
-    showSlide(slideIndex + step);
+    if (isTransitioning) return;
+    isTransitioning = true;
+    goTo(current + step, true);
     resetTimer();
   }
 
   function currentSlide(index) {
-    showSlide(index);
+    if (isTransitioning) return;
+    isTransitioning = true;
+    goTo(index + 1, true);
     resetTimer();
   }
 
-  showSlide(slideIndex);
+  function resetTimer() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => moveSlide(1), 5000);
+  }
 
-  let autoSlide = setInterval(() => {
-    moveSlide(1);
-  }, 5000);
+  goTo(1, false);
+
+  let autoSlide = setInterval(() => moveSlide(1), 5000);
 </script>
-
 
 <!-- Count-Up Animation Script -->
 <script>
@@ -601,5 +620,6 @@ startCountWhenVisible();
 
 
 </html>
+
 
 
