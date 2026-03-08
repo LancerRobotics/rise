@@ -510,17 +510,26 @@
     dots[slideIndex].classList.add("active");
   }
 
+  function resetTimer() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => {
+      moveSlide(1);
+    }, 5000);
+  }
+
   function moveSlide(step) {
     showSlide(slideIndex + step);
+    resetTimer();
   }
 
   function currentSlide(index) {
     showSlide(index);
+    resetTimer();
   }
 
   showSlide(slideIndex);
 
-  setInterval(() => {
+  let autoSlide = setInterval(() => {
     moveSlide(1);
   }, 5000);
 </script>
@@ -589,5 +598,6 @@ startCountWhenVisible();
 
 
 </body>
+
 
 </html>
