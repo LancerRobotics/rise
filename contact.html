@@ -93,34 +93,42 @@
 
   <section class="contact_section layout_padding">
     <div class="container">
-      <div class="heading_container">
+      <div class="heading_container contact-heading">
         <h2>
           Contact Us
         </h2>
+        <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <form action="">
-            <div>
-              <input type="text" placeholder="Name" />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone Number" />
-            </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
-            </div>
-            <div class="d-flex ">
-              <button>
-                SEND
-              </button>
-            </div>
-          </form>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="contact-form-wrapper">
+            <form action="">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="message-box" placeholder="Write your message here..."></textarea>
+              </div>
+              <div class="form-action">
+                <button type="submit" class="btn-send">
+                  <span>Send Message</span>
+                  <i class="fa fa-paper-plane-o"></i>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="map_container">
             <div class="map">
               <div id="googleMap" style="width:100%;height:100%;"></div>
@@ -137,48 +145,48 @@
   <!-- info section -->
   <section class="info_section ">
     <div class="container">
-      <h4>
-        Get In Touch
-      </h4>
+      <div class="info-header">
+        <h2>
+          Get In Touch
+        </h2>
+        <p>Multiple ways to connect with us</p>
+      </div>
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <div class="info_items">
-            <div class="row">
+            <div class="row g-4">
               <div class="col-md-4">
-                <a href="">
-                  <div class="item ">
-                    <div class="img-box ">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      Lorem Ipsum is simply dummy text
-                    </p>
+                <div class="contact-card">
+                  <div class="icon-wrapper">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
                   </div>
-                </a>
+                  <h3>Address</h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing industry
+                  </p>
+                </div>
               </div>
               <div class="col-md-4">
-                <a href="">
-                  <div class="item ">
-                    <div class="img-box ">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      +02 1234567890
-                    </p>
+                <div class="contact-card">
+                  <div class="icon-wrapper">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
                   </div>
-                </a>
+                  <h3>Phone</h3>
+                  <p>
+                    <a href="tel:+021234567890">+02 1234567890</a>
+                  </p>
+                </div>
               </div>
               <div class="col-md-4">
-                <a href="">
-                  <div class="item ">
-                    <div class="img-box">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      demo@gmail.com
-                    </p>
+                <div class="contact-card">
+                  <div class="icon-wrapper">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
                   </div>
-                </a>
+                  <h3>Email</h3>
+                  <p>
+                    <a href="mailto:demo@gmail.com">demo@gmail.com</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -186,20 +194,21 @@
       </div>
     </div>
     <div class="social-box">
-      <h4>
+      <h3>
         Follow Us
-      </h4>
-      <div class="box">
-        <a href="">
+      </h3>
+      <p>Stay connected on social media</p>
+      <div class="social-links">
+        <a href="" class="social-link">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
-        <a href="">
+        <a href="" class="social-link">
           <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
-        <a href="">
+        <a href="" class="social-link">
           <i class="fa fa-youtube" aria-hidden="true"></i>
         </a>
-        <a href="https://www.instagram.com/rise.robotics/">
+        <a href="https://www.instagram.com/rise.robotics/" class="social-link">
           <i class="fa fa-instagram" aria-hidden="true"></i>
         </a>
       </div>

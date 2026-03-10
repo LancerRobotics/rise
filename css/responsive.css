@@ -70,13 +70,41 @@
         margin-bottom: 45px;
     }
 
-
     .professional_section .img-box {
         display: none;
     }
 
     .contact_section form {
         margin-bottom: 45px;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .contact_section .contact-heading h2 {
+        font-size: 2rem;
+    }
+
+    .contact_section .map_container {
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    .info_section {
+        padding: 60px 0;
+    }
+
+    .info_section .info-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .social-links {
+        gap: 15px;
     }
 
     .info_section .info_items::before {
