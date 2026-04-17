@@ -33,7 +33,6 @@
   <link rel="shortcut icon" href="images/rise-logo.png">
 
   <style>
-    /* Image Carousel Styles */
     .image-carousel {
       position: relative;
       width: 100%;
@@ -61,29 +60,6 @@
       opacity: 1;
     }
 
-    .carousel-caption {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 15px 30px;
-      border-radius: 5px;
-      max-width: 80%;
-    }
-
-    .carousel-nav {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 10px;
-      z-index: 10;
-    }
-
     .carousel-arrow {
       position: absolute;
       top: 50%;
@@ -102,31 +78,12 @@
       background: rgba(255, 255, 255, 0.5);
     }
 
-    .carousel-arrow.prev {
-      left: 20px;
-    }
-
-    .carousel-arrow.next {
-      right: 20px;
-    }
+    .carousel-arrow.prev { left: 20px; }
+    .carousel-arrow.next { right: 20px; }
 
     @media (max-width: 768px) {
-      .image-carousel {
-        height: 350px;
-      }
-
-      .carousel-caption h3 {
-        font-size: 18px;
-      }
-
-      .carousel-caption p {
-        font-size: 14px;
-      }
-
-      .carousel-arrow {
-        font-size: 20px;
-        padding: 10px 15px;
-      }
+      .image-carousel { height: 350px; }
+      .carousel-arrow { font-size: 20px; padding: 10px 15px; }
     }
 
     .feature_section {
@@ -134,7 +91,6 @@
       padding-bottom: 0px;
     }
 
-    /* Progress Bar Styles */
     .carousel-progress {
       position: absolute;
       bottom: 15px;
@@ -170,17 +126,15 @@
       width: 100%;
       transition: none;
     }
-
   </style>
 </head>
 
 <body>
   <div class="hero_area">
-    <!-- header section -->
     <header class="header_section">
       <div class="header_bottom">
         <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
             <a class="navbar-brand" href="index.html">
               <span>RISE</span>
             </a>
@@ -192,23 +146,19 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ">
+              <ul class="navbar-nav">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home</a>
                 </li>
-
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
+                  <a class="nav-link" href="about.html">About</a>
                 </li>
-
                 <li class="nav-item">
                   <a class="nav-link" href="ourteam.html">Our Team</a>
                 </li>
-
                 <li class="nav-item">
                   <a class="nav-link" href="learn.html">Learn</a>
                 </li>
-
                 <li class="nav-item">
                   <a class="nav-link" href="#contact-us">Contact Us</a>
                 </li>
@@ -218,41 +168,22 @@
         </div>
       </div>
     </header>
+  </div>
 
-<!-- Image Carousel -->
-<div class="image-carousel">
+  <!-- Image Carousel -->
+  <div class="image-carousel">
     <div class="carousel-slides" id="carouselTrack">
-
-        <div class="carousel-slide">
-            <img src="images/home1.JPG" alt="RISE Robotics Program">
-        </div>
-
-        <div class="carousel-slide">
-            <img src="images/home2.JPG" alt="RISE Students Learning">
-        </div>
-
-        <div class="carousel-slide">
-            <img src="images/home3.JPG" alt="RISE Community Engagement">
-        </div>
-
-        <div class="carousel-slide">
-            <img src="images/home4.JPG" alt="RISE Classroom Activity">
-        </div>
-
-        <div class="carousel-slide">
-            <img src="images/home5.JPG" alt="RISE Team Collaboration">
-        </div>
-
-        <div class="carousel-slide">
-            <img src="images/home6.JPG" alt="RISE Robotics Training">
-        </div>
+      <div class="carousel-slide"><img src="images/home1.JPG" alt="RISE Robotics Program"></div>
+      <div class="carousel-slide"><img src="images/home2.JPG" alt="RISE Students Learning"></div>
+      <div class="carousel-slide"><img src="images/home3.JPG" alt="RISE Community Engagement"></div>
+      <div class="carousel-slide"><img src="images/home4.JPG" alt="RISE Classroom Activity"></div>
+      <div class="carousel-slide"><img src="images/home5.JPG" alt="RISE Team Collaboration"></div>
+      <div class="carousel-slide"><img src="images/home6.JPG" alt="RISE Robotics Training"></div>
     </div>
 
-    <!-- Arrows -->
     <button class="carousel-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
     <button class="carousel-arrow next" onclick="moveSlide(1)">&#10095;</button>
 
-    <!-- Progress Bar -->
     <div class="carousel-progress">
       <div class="progress-segment" onclick="currentSlide(0)"><div class="progress-fill" id="prog-0"></div></div>
       <div class="progress-segment" onclick="currentSlide(1)"><div class="progress-fill" id="prog-1"></div></div>
@@ -261,421 +192,246 @@
       <div class="progress-segment" onclick="currentSlide(4)"><div class="progress-fill" id="prog-4"></div></div>
       <div class="progress-segment" onclick="currentSlide(5)"><div class="progress-fill" id="prog-5"></div></div>
     </div>
-</div>
-
-
-<!-- feature section -->
-<section class="feature_section">
-  <div class="container">
-    <div class="feature_container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-
-      <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <h2 class="count" data-target="6000" style="font-size: 48px; font-weight: 700; margin: 0;">0</h2>
-        <h5 class="name" style="margin-top: 15px;">Raised</h5>
-      </div>
-
-      <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <h2 class="count" data-target="90" style="font-size: 48px; font-weight: 700; margin: 0;">0</h2>
-        <h5 class="name" style="margin-top: 15px;">Students</h5>
-      </div>
-
-      <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <h2 class="count" data-target="11" style="font-size: 48px; font-weight: 700; margin: 0;">0</h2>
-        <h5 class="name" style="margin-top: 15px;">Schools in Kenya</h5>
-      </div>
-
-    </div>
   </div>
-</section>
 
-<!-- Featured In Section -->
-<section class="featured_section" style="padding: 60px 0; text-align: center;">
-  <h2 style="font-weight: 700; margin-bottom: 40px;">Featured In</h2>
+  <!-- Stats section -->
+  <section class="feature_section">
+    <div class="container">
+      <div class="feature_container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
 
-  <div style="
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  ">
-
-    <!-- CARD 1 -->
-    <a href="https://www.tapinto.net/towns/millburn-slash-short-hills/sections/giving-back/articles/millburn-high-school-students-raise-over-5-500-purchase-robotics-kits-for-40-kenyan-students-train-teachers"
-       target="_blank"
-       style="text-decoration: none; color: inherit;">
-      <div style="
-        width: 320px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        overflow: hidden;
-        transition: transform 0.2s;
-      " onmouseover="this.style.transform='scale(1.03)'"
-        onmouseout="this.style.transform='scale(1)'">
-
-        <img src="images/articleImage1.jpg" style="width:100%; height: 270px; object-fit: cover;" alt="Article image">
-
-        <div style="padding: 20px;">
-          <h4 style="font-weight: 700;">Millburn Students Raise $5,500</h4>
-          <p style="margin-top: 10px; color: #444;">
-            TAPinto article covering RISE students fundraising for robotics education in Kenya.
-          </p>
+        <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          <h2 class="count" data-target="6000" style="font-size: 48px; font-weight: 700; margin: 0;">0</h2>
+          <h5 class="name" style="margin-top: 15px;">Raised</h5>
         </div>
-      </div>
-    </a>
 
-    <!-- CARD 2 -->
-    <a href="https://www.tapinto.net/towns/millburn-slash-short-hills/sections/giving-back/articles/3-millburn-high-school-students-are-fundraising-to-provide-stem-equipment-for-students-in-kenya"
-       target="_blank"
-       style="text-decoration: none; color: inherit;">
-      <div style="
-        width: 320px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        overflow: hidden;
-        transition: transform 0.2s;
-      " onmouseover="this.style.transform='scale(1.03)'"
-        onmouseout="this.style.transform='scale(1)'">
-
-        <img src="images/articleImage2.jpg" style="width: 100%; height: 270px; object-fit: cover;" alt="Article image">
-
-        <div style="padding: 20px;">
-          <h4 style="font-weight: 700;">Fundraising for STEM Equipment</h4>
-          <p style="margin-top: 10px; color: #444;">
-            TAPinto article about expanding robotics access for Kenyan students.
-          </p>
+        <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          <h2 class="count" data-target="90" style="font-size: 48px; font-weight: 700; margin: 0;">0</h2>
+          <h5 class="name" style="margin-top: 15px;">Students</h5>
         </div>
-      </div>
-    </a>
 
-    <!-- CARD 3 -->
-    <a href="https://www.linkedin.com/posts/teeemglobal_robotics-stem-education-activity-7374170711533178881-Oo12/"
-       target="_blank"
-       style="text-decoration: none; color: inherit;">
-      <div style="
-        width: 320px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        overflow: hidden;
-        transition: transform 0.2s;
-      " onmouseover="this.style.transform='scale(1.03)'"
-        onmouseout="this.style.transform='scale(1)'">
-
-        <img src="images/articleImage3.jpg" style="width: 100%; height: 270px; object-fit: cover;" alt="Video preview">
-
-        <div style="padding: 20px;">
-          <h4 style="font-weight: 700;">TEEEM Robotics Video</h4>
-          <p style="margin-top: 10px; color: #444;">
-            Video feature showcasing the impact of RISE and TEEEM in Kenya.
-          </p>
+        <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          <h2 class="count" data-target="11" style="font-size: 48px; font-weight: 700; margin: 0;">0</h2>
+          <h5 class="name" style="margin-top: 15px;">Schools in Kenya</h5>
         </div>
+
       </div>
-    </a>
+    </div>
+  </section>
 
-    <!-- CARD 4 -->
-    <a href="https://patch.com/new-jersey/livingston/livingston-teen-builds-robotics-lab-kenya"
-       target="_blank"
-       style="text-decoration: none; color: inherit;">
-      <div style="
-        width: 320px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        overflow: hidden;
-        transition: transform 0.2s;
-      " onmouseover="this.style.transform='scale(1.03)'"
-        onmouseout="this.style.transform='scale(1)'">
-
-        <img src="images/articleImage4.jpg" style="width:100%; height: 270px; object-fit: cover;" alt="Article image">
-
-        <div style="padding: 20px;">
-          <h4 style="font-weight: 700;">Livingston Teen Builds Robotics Lab in Kenya</h4>
-          <p style="margin-top: 10px; color: #444;">
-            Patch article highlighting the creation of a robotics lab and RISE's work in Kenya.
-          </p>
-        </div>
-      </div>
-    </a>
-
-    <!-- CARD 5 -->
-    <a href="https://www.youtube.com/watch?v=lFkNB2J0bpM"
-       target="_blank"
-       style="text-decoration: none; color: inherit;">
-      <div style="
-        width: 320px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        overflow: hidden;
-        transition: transform 0.2s;
-      " onmouseover="this.style.transform='scale(1.03)'"
-        onmouseout="this.style.transform='scale(1)'">
-
-        <div style="position: relative; width: 100%; height: 270px; background: #000;">
-          <img src="https://img.youtube.com/vi/lFkNB2J0bpM/maxresdefault.jpg"
-               style="width:100%; height:100%; object-fit: cover; opacity: 0.85;"
-               alt="YouTube Video">
-          <!-- Play button overlay -->
-          <div style="
-            position: absolute; top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 64px; height: 64px;
-            background: rgba(255,0,0,0.85);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-          ">
-            <div style="
-              width: 0; height: 0;
-              border-top: 14px solid transparent;
-              border-bottom: 14px solid transparent;
-              border-left: 22px solid white;
-              margin-left: 5px;
-            "></div>
+  <!-- About section -->
+  <section class="about_section layout_padding-bottom" id="about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="detail-box">
+            <h2 style="margin-bottom: 25px;">About us</h2>
+            <p>
+              RISE is a student-led initiative bringing robotics education to young learners at the
+              <a style="all:initial; cursor:inherit; color:rgb(0, 0, 255); text-decoration: underline;"
+                href="https://graceinitiative.org/">GRACE Academic Center</a> in Kisii, Kenya, in collaboration with
+              the nonprofit organization TEEEM. We've raised about $6,000 to provide VEX-IQ kits sufficient for 50
+              students, with 30 students currently actively participating in the program.
+            </p>
+            <a href="about.html">Read More</a>
           </div>
         </div>
-
-        <div style="padding: 20px;">
-          <h4 style="font-weight: 700;">RISE on YouTube</h4>
-          <p style="margin-top: 10px; color: #444;">
-            Watch our featured YouTube video showcasing RISE's impact on robotics education in Kenya.
-          </p>
-        </div>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- about section -->
-<section class="about_section layout_padding-bottom" id="about-us">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-md-6">
-        <div class="detail-box">
-          <h2 style="margin-bottom: 25px;">About us</h2>
-          <p>
-            RISE is a student-led initiative bringing robotics education to young learners at the
-            <a style="all:initial; cursor:inherit; color:rgb(0, 0, 255); text-decoration: underline;"
-              href="https://graceinitiative.org/">GRACE Academic Center</a> in Kisii, Kenya, in collaboration with
-            the nonprofit organization TEEEM. We've raised about $6,000 to provide VEX-IQ kits sufficient for 50
-            students, with 30 students currently actively participating in the program.
-          </p>
-          <a href="about.html">Read More</a>
-        </div>
-      </div>
-      <div class="col-lg-7 col-md-6">
-        <div class="img-box">
-          <img src="images/teeem.webp" alt="">
+        <div class="col-lg-7 col-md-6">
+          <div class="img-box">
+            <img src="images/teeem.webp" alt="">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Support Us section -->
-<section class="professional_section layout_padding support_us" id="support-us">
-  <div class="container">
-    <div class="row">
-      <div>
-        <div class="detail-box" style="display: flex; flex-direction: column; align-items: center; align-self: center;">
-          <div style="width:100%">
-            <h2>Support Us</h2>
-          </div>
-          <div class="row align-items-center">
-            <div class="col-lg-4 col-md-5">
-              <div class="detail-box text">
-                <p>Help us bring robotics education to Kenya! Your support enables us to provide VEX-IQ kits and create a sustainable STEM curriculum for students at the GRACE Academic Center.</p>
-                <br>
-                <p>With your help, we can provide students with hands-on STEM learning through robotics. 100% of funds raised will go toward purchasing a VEX IQ Classroom Bundle, equipping students with everything they need to build, program, and compete with their own robots.</p>
-              </div>
-              <a onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">Donate Here</a>
+  <!-- Support Us section -->
+  <section class="professional_section layout_padding support_us" id="support-us">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="detail-box" style="display: flex; flex-direction: column; align-items: center; align-self: center;">
+            <div style="width:100%">
+              <h2>Support Us</h2>
             </div>
-            <div class="col-lg-8 col-md-7">
-              <div class="img-box">
-                <img
-                  src="https://images.givelively.org/nonprofits/da121b0f-b89e-483e-84e7-005a0369c7b9/campaigns/millburn-rise-robotics-in-schools-everywhere/background_images/millburn-rise-robotics-in-schools-everywhere_processed_03a2faabbd4189040ce72217041b74b7e4396c13cc1be8bb8087b80a4b39ded6_background_image.png"
-                  alt="Donate Here!"
-                  onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">
+            <div class="row align-items-center">
+              <div class="col-lg-4 col-md-5">
+                <div class="detail-box text">
+                  <p>Help us bring robotics education to Kenya! Your support enables us to provide VEX-IQ kits and create a sustainable STEM curriculum for students at the GRACE Academic Center.</p>
+                  <br>
+                  <p>With your help, we can provide students with hands-on STEM learning through robotics. 100% of funds raised will go toward purchasing a VEX IQ Classroom Bundle, equipping students with everything they need to build, program, and compete with their own robots.</p>
+                </div>
+                <a onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">Donate Here</a>
+              </div>
+              <div class="col-lg-8 col-md-7">
+                <div class="img-box">
+                  <img
+                    src="https://images.givelively.org/nonprofits/da121b0f-b89e-483e-84e7-005a0369c7b9/campaigns/millburn-rise-robotics-in-schools-everywhere/background_images/millburn-rise-robotics-in-schools-everywhere_processed_03a2faabbd4189040ce72217041b74b7e4396c13cc1be8bb8087b80a4b39ded6_background_image.png"
+                    alt="Donate Here!"
+                    onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT US SECTION -->
-<section id="contact-us" class="contact_section layout_padding">
-  <div class="container">
-    <div class="heading_container">
-      <h2>Contact Us</h2>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <form action="">
-          <div><input type="text" placeholder="Name" /></div>
-          <div><input type="text" placeholder="Phone Number" /></div>
-          <div><input type="email" placeholder="Email" /></div>
-          <div><input type="text" class="message-box" placeholder="Message" /></div>
-          <div class="d-flex">
-            <button>SEND</button>
-          </div>
-        </form>
+  <!-- Contact Us section -->
+  <section id="contact-us" class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Contact Us</h2>
       </div>
 
-      <div class="col-md-6">
-        <div class="map_container">
-          <div class="map">
-            <iframe width="100%" height="100%" style="border:0;" loading="lazy"
-              allowfullscreen
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.3889684329297!2d-74.31429462356116!3d40.72072867139302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a8a6c2cd3201%3A0xe9d60f7ce2495493!2sMillburn%20High%20School!5e0!3m2!1sen!2sus!4v1701129999999">
-            </iframe>
+      <div class="row">
+        <div class="col-md-6">
+          <form action="">
+            <div><input type="text" placeholder="Name" /></div>
+            <div><input type="text" placeholder="Phone Number" /></div>
+            <div><input type="email" placeholder="Email" /></div>
+            <div><input type="text" class="message-box" placeholder="Message" /></div>
+            <div class="d-flex">
+              <button>SEND</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <div class="map_container">
+            <div class="map">
+              <iframe width="100%" height="100%" style="border:0;" loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.3889684329297!2d-74.31429462356116!3d40.72072867139302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a8a6c2cd3201%3A0xe9d60f7ce2495493!2sMillburn%20High%20School!5e0!3m2!1sen!2sus!4v1701129999999">
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- footer section -->
-<section class="info_section">
-  <div class="container">
-
-    <div class="info_contact">
-      <div class="row justify-content-center text-center">
-
-        <div class="col-md-4">
-          <div class="contact_item">
-            <i class="fa fa-map-marker"></i>
-            <p>Millburn High School</p>
+  <!-- Footer -->
+  <section class="info_section">
+    <div class="container">
+      <div class="info_contact">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-4">
+            <div class="contact_item">
+              <i class="fa fa-map-marker"></i>
+              <p>Millburn High School</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact_item">
+              <i class="fa fa-phone"></i>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact_item">
+              <i class="fa fa-envelope"></i>
+              <p></p>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-4">
-          <div class="contact_item">
-            <i class="fa fa-phone"></i>
-            <p></p>
-          </div>
+      <div class="social-box text-center" style="margin-top: 40px;">
+        <h4>Follow Us</h4>
+        <div class="box" style="margin-top: 20px;">
+          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/rise.robotics/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
-
-        <div class="col-md-4">
-          <div class="contact_item">
-            <i class="fa fa-envelope"></i>
-            <p></p>
-          </div>
-        </div>
-
       </div>
     </div>
+  </section>
 
-    <div class="social-box text-center" style="margin-top: 40px;">
-      <h4>Follow Us</h4>
+  <!-- Carousel Script -->
+  <script>
+    const track = document.getElementById("carouselTrack");
+    const realSlides = Array.from(track.querySelectorAll(".carousel-slide"));
+    const total = realSlides.length;
 
-      <div class="box" style="margin-top: 20px;">
-        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/rise.robotics/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      </div>
-    </div>
+    const firstClone = realSlides[0].cloneNode(true);
+    const lastClone = realSlides[total - 1].cloneNode(true);
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, realSlides[0]);
 
-  </div>
-</section>
+    let current = 1;
+    let isTransitioning = false;
 
+    function getProgressFills() {
+      return Array.from({ length: total }, (_, i) => document.getElementById(`prog-${i}`));
+    }
 
-<!-- Carousel Script -->
-<script>
-  const track = document.getElementById("carouselTrack");
-  const realSlides = Array.from(track.querySelectorAll(".carousel-slide"));
-  const total = realSlides.length;
+    function startProgress(index) {
+      const fills = getProgressFills();
+      fills.forEach((fill, i) => {
+        fill.classList.remove("animating", "done");
+        if (i < index) fill.classList.add("done");
+      });
+      void fills[index].offsetWidth;
+      fills[index].classList.add("animating");
+    }
 
-  const firstClone = realSlides[0].cloneNode(true);
-  const lastClone = realSlides[total - 1].cloneNode(true);
-  track.appendChild(firstClone);
-  track.insertBefore(lastClone, realSlides[0]);
-
-  let current = 1;
-  let isTransitioning = false;
-
-  function getProgressFills() {
-    return Array.from({ length: total }, (_, i) => document.getElementById(`prog-${i}`));
-  }
-
-  function startProgress(index) {
-    const fills = getProgressFills();
-    fills.forEach((fill, i) => {
-      fill.classList.remove("animating", "done");
-      if (i < index) {
-        fill.classList.add("done");
+    function goTo(index, animate) {
+      track.style.transition = animate === false ? "none" : "transform 0.8s ease-in-out";
+      track.style.transform = `translateX(-${index * 100}%)`;
+      current = index;
+      if (animate !== false) {
+        const dotIndex = (index - 1 + total) % total;
+        startProgress(dotIndex);
       }
+    }
+
+    track.addEventListener("transitionend", () => {
+      if (current === 0) {
+        goTo(total, false);
+        startProgress(total - 1);
+      } else if (current === total + 1) {
+        goTo(1, false);
+        startProgress(0);
+      }
+      isTransitioning = false;
     });
-    void fills[index].offsetWidth;
-    fills[index].classList.add("animating");
-  }
 
-  function goTo(index, animate) {
-    track.style.transition = animate === false ? "none" : "transform 0.8s ease-in-out";
-    track.style.transform = `translateX(-${index * 100}%)`;
-    current = index;
-
-    if (animate !== false) {
-      const dotIndex = (index - 1 + total) % total;
-      startProgress(dotIndex);
+    function moveSlide(step) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      goTo(current + step, true);
+      resetTimer();
     }
-  }
 
-  track.addEventListener("transitionend", () => {
-    if (current === 0) {
-      goTo(total, false);
-      startProgress(total - 1);
-    } else if (current === total + 1) {
-      goTo(1, false);
-      startProgress(0);
+    function currentSlide(index) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      goTo(index + 1, true);
+      resetTimer();
     }
-    isTransitioning = false;
-  });
 
-  function moveSlide(step) {
-    if (isTransitioning) return;
-    isTransitioning = true;
-    goTo(current + step, true);
-    resetTimer();
-  }
+    function resetTimer() {
+      clearInterval(autoSlide);
+      const fills = getProgressFills();
+      const dotIndex = (current - 1 + total) % total;
+      fills[dotIndex].classList.remove("animating", "done");
+      void fills[dotIndex].offsetWidth;
+      fills[dotIndex].classList.add("animating");
+      autoSlide = setInterval(() => moveSlide(1), 5000);
+    }
 
-  function currentSlide(index) {
-    if (isTransitioning) return;
-    isTransitioning = true;
-    goTo(index + 1, true);
-    resetTimer();
-  }
+    goTo(1, false);
+    startProgress(0);
+    let autoSlide = setInterval(() => moveSlide(1), 5000);
+  </script>
 
-  function resetTimer() {
-    clearInterval(autoSlide);
-    const fills = getProgressFills();
-    const dotIndex = (current - 1 + total) % total;
-    fills[dotIndex].classList.remove("animating", "done");
-    void fills[dotIndex].offsetWidth;
-    fills[dotIndex].classList.add("animating");
-    autoSlide = setInterval(() => moveSlide(1), 5000);
-  }
-
-  goTo(1, false);
-  startProgress(0);
-
-  let autoSlide = setInterval(() => moveSlide(1), 5000);
-</script>
-
-<!-- Count-Up Animation Script -->
-<script>
-function animateCountUp() {
-    const counters = document.querySelectorAll('.count');
-
-    counters.forEach((counter, index) => {
+  <!-- Count-Up Animation Script -->
+  <script>
+    function animateCountUp() {
+      const counters = document.querySelectorAll('.count');
+      counters.forEach((counter, index) => {
         const target = +counter.getAttribute('data-target');
         const duration = 1200;
         const delay = index * 300;
@@ -683,56 +439,36 @@ function animateCountUp() {
         const startTime = performance.now() + delay;
 
         function update(now) {
-            if (now < startTime) {
-                requestAnimationFrame(update);
-                return;
-            }
-
-            const elapsed = now - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-
-            const eased = 1 - Math.pow(1 - progress, 3);
-
-            const value = Math.floor(startVal + (eased * target));
-            if (counter.getAttribute("data-target") === "6000") {
-              counter.textContent = "$" + value;
-            } else {
-              counter.textContent = value;
+          if (now < startTime) { requestAnimationFrame(update); return; }
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.floor(startVal + (eased * target));
+          counter.textContent = counter.getAttribute("data-target") === "6000" ? "$" + value : value;
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          } else {
+            counter.textContent = counter.getAttribute("data-target") === "6000" ? "$" + target : target;
           }
-
-            if (progress < 1) {
-                requestAnimationFrame(update);
-            } else {
-                if (counter.getAttribute("data-target") === "6000") {
-                  counter.textContent = "$" + target;
-                } else {
-                counter.textContent = target;
-                }
-            }
         }
-
         requestAnimationFrame(update);
-    });
-}
+      });
+    }
 
-function startCountWhenVisible() {
-    const statsSection = document.querySelector('.feature_section');
-
-    const observer = new IntersectionObserver(entries => {
+    function startCountWhenVisible() {
+      const statsSection = document.querySelector('.feature_section');
+      const observer = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
-            animateCountUp();
-            observer.disconnect();
+          animateCountUp();
+          observer.disconnect();
         }
-    });
+      });
+      observer.observe(statsSection);
+    }
 
-    observer.observe(statsSection);
-}
-
-startCountWhenVisible();
-</script>
-
+    startCountWhenVisible();
+  </script>
 
 </body>
-
 
 </html>
