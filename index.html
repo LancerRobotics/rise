@@ -78,12 +78,23 @@
       background: rgba(255, 255, 255, 0.5);
     }
 
-    .carousel-arrow.prev { left: 20px; }
-    .carousel-arrow.next { right: 20px; }
+    .carousel-arrow.prev {
+      left: 20px;
+    }
+
+    .carousel-arrow.next {
+      right: 20px;
+    }
 
     @media (max-width: 768px) {
-      .image-carousel { height: 350px; }
-      .carousel-arrow { font-size: 20px; padding: 10px 15px; }
+      .image-carousel {
+        height: 350px;
+      }
+
+      .carousel-arrow {
+        font-size: 20px;
+        padding: 10px 15px;
+      }
     }
 
     .feature_section {
@@ -139,9 +150,8 @@
               <span>RISE</span>
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
             </button>
 
@@ -185,12 +195,24 @@
     <button class="carousel-arrow next" onclick="moveSlide(1)">&#10095;</button>
 
     <div class="carousel-progress">
-      <div class="progress-segment" onclick="currentSlide(0)"><div class="progress-fill" id="prog-0"></div></div>
-      <div class="progress-segment" onclick="currentSlide(1)"><div class="progress-fill" id="prog-1"></div></div>
-      <div class="progress-segment" onclick="currentSlide(2)"><div class="progress-fill" id="prog-2"></div></div>
-      <div class="progress-segment" onclick="currentSlide(3)"><div class="progress-fill" id="prog-3"></div></div>
-      <div class="progress-segment" onclick="currentSlide(4)"><div class="progress-fill" id="prog-4"></div></div>
-      <div class="progress-segment" onclick="currentSlide(5)"><div class="progress-fill" id="prog-5"></div></div>
+      <div class="progress-segment" onclick="currentSlide(0)">
+        <div class="progress-fill" id="prog-0"></div>
+      </div>
+      <div class="progress-segment" onclick="currentSlide(1)">
+        <div class="progress-fill" id="prog-1"></div>
+      </div>
+      <div class="progress-segment" onclick="currentSlide(2)">
+        <div class="progress-fill" id="prog-2"></div>
+      </div>
+      <div class="progress-segment" onclick="currentSlide(3)">
+        <div class="progress-fill" id="prog-3"></div>
+      </div>
+      <div class="progress-segment" onclick="currentSlide(4)">
+        <div class="progress-fill" id="prog-4"></div>
+      </div>
+      <div class="progress-segment" onclick="currentSlide(5)">
+        <div class="progress-fill" id="prog-5"></div>
+      </div>
     </div>
   </div>
 
@@ -199,17 +221,20 @@
     <div class="container">
       <div class="feature_container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
 
-        <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div class="box"
+          style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           <h2 class="count" data-target="6000" style="font-size: 48px; font-weight: 700; margin: 0;">0</h2>
           <h5 class="name" style="margin-top: 15px;">Raised</h5>
         </div>
 
-        <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div class="box"
+          style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           <h2 class="count" data-target="90" style="font-size: 48px; font-weight: 700; margin: 0;">0</h2>
           <h5 class="name" style="margin-top: 15px;">Students</h5>
         </div>
 
-        <div class="box" style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div class="box"
+          style="text-align: center; padding: 30px; background: #fff; border-radius: 12px; width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           <h2 class="count" data-target="11" style="font-size: 48px; font-weight: 700; margin: 0;">0</h2>
           <h5 class="name" style="margin-top: 15px;">Schools in Kenya</h5>
         </div>
@@ -223,11 +248,11 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6">
-          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-            <iframe 
-              src="https://www.youtube.com/embed/lFkNB2J0bpM" 
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          <div
+            style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            <iframe src="https://www.youtube.com/embed/lFkNB2J0bpM"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
             </iframe>
           </div>
@@ -264,32 +289,21 @@
 
   <!-- Support Us section -->
   <section class="professional_section layout_padding support_us" id="support-us">
-    <div class="container">
-      <div class="row">
-        <div>
-          <div class="detail-box" style="display: flex; flex-direction: column; align-items: center; align-self: center;">
-            <div style="width:100%">
-              <h2>Support Us</h2>
-            </div>
-            <div class="row align-items-center">
-              <div class="col-lg-4 col-md-5">
-                <div class="detail-box text">
-                  <p>Help us bring robotics education to Kenya! Your support enables us to provide VEX-IQ kits and create a sustainable STEM curriculum for students at the GRACE Academic Center.</p>
-                  <br>
-                  <p>With your help, we can provide students with hands-on STEM learning through robotics. 100% of funds raised will go toward purchasing a VEX IQ Classroom Bundle, equipping students with everything they need to build, program, and compete with their own robots.</p>
-                </div>
-                <a onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">Donate Here</a>
-              </div>
-              <div class="col-lg-8 col-md-7">
-                <div class="img-box">
-                  <img
-                    src="https://images.givelively.org/nonprofits/da121b0f-b89e-483e-84e7-005a0369c7b9/campaigns/millburn-rise-robotics-in-schools-everywhere/background_images/millburn-rise-robotics-in-schools-everywhere_processed_03a2faabbd4189040ce72217041b74b7e4396c13cc1be8bb8087b80a4b39ded6_background_image.png"
-                    alt="Donate Here!"
-                    onclick="window.location.href='https://secure.givelively.org/donate/teeem-foundation/teeem-rise'">
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="container text-center">
+      <div class="section-heading-container">
+        <h2>Support Our Mission</h2>
+      </div>
+      <div class="modern-support-wrapper">
+        <div class="support-content">
+          <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 20px;">Help Us Build the Future</h3>
+          <p style="color: #4a5568; line-height: 1.7; font-size: 1.1rem;">
+            Your support enables us to provide VEX-IQ kits and create a sustainable STEM curriculum for students 
+            at the GRACE Academic Center in Kenya. 100% of your donation goes directly to equipment and curriculum development.
+          </p>
+          <a href="https://secure.givelively.org/donate/teeem-foundation/teeem-rise" target="_blank" class="btn-premium">Donate Now</a>
+        </div>
+        <div class="support-visual">
+          <img src="https://images.givelively.org/nonprofits/da121b0f-b89e-483e-84e7-005a0369c7b9/campaigns/millburn-rise-robotics-in-schools-everywhere/background_images/millburn-rise-robotics-in-schools-everywhere_processed_03a2faabbd4189040ce72217041b74b7e4396c13cc1be8bb8087b80a4b39ded6_background_image.png" alt="Support Mission">
         </div>
       </div>
     </div>
@@ -318,8 +332,7 @@
         <div class="col-md-6">
           <div class="map_container">
             <div class="map">
-              <iframe width="100%" height="100%" style="border:0;" loading="lazy"
-                allowfullscreen
+              <iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.3889684329297!2d-74.31429462356116!3d40.72072867139302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a8a6c2cd3201%3A0xe9d60f7ce2495493!2sMillburn%20High%20School!5e0!3m2!1sen!2sus!4v1701129999999">
               </iframe>
             </div>
@@ -338,7 +351,8 @@
           <a class="navbar-brand" href="index.html" style="margin-bottom: 20px; display: inline-block;">
             <img src="images/rise-logo.png" alt="RISE Logo" style="height: 90px; width: auto; border-radius: 8px;">
           </a>
-          <p>RISE is a student-led initiative dedicated to expanding access to robotics education for students in Kenya and beyond, empowering the next generation of STEM leaders.</p>
+          <p>RISE is a student-led initiative dedicated to expanding access to robotics education for students in Kenya
+            and beyond, empowering the next generation of STEM leaders.</p>
         </div>
 
         <!-- Column 2: Quick Links -->
@@ -372,9 +386,12 @@
           <h4>Follow Us</h4>
           <div class="footer-social">
             <a href="#" class="social-icon" title="Facebook"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/rise.robotics/" target="_blank" class="social-icon" title="Instagram"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.youtube.com/channel/UCwPTQLYD3LR9unq53qp3jlA" target="_blank" class="social-icon" title="YouTube"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.linkedin.com/company/robotics-in-schools-everywhere/" target="_blank" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/rise.robotics/" target="_blank" class="social-icon" title="Instagram"><i
+                class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCwPTQLYD3LR9unq53qp3jlA" target="_blank" class="social-icon"
+              title="YouTube"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.linkedin.com/company/robotics-in-schools-everywhere/" target="_blank"
+              class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
       </div>
