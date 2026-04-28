@@ -804,7 +804,7 @@ a:focus {
   font-family: 'Merriweather Sans', sans-serif;
   text-transform: uppercase;
   padding: 14px 50px;
-  background: linear-gradient(135deg, #d10909 0%, #cb0b0b 100%);
+  background: linear-gradient(135deg, #381d02 0%, #381d02 100%);
   border-radius: 8px;
   color: #ffffff;
   font-weight: 600;
@@ -818,7 +818,7 @@ a:focus {
 .btn-send:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-  background: linear-gradient(135deg, #d10909 0%, #cb0b0b 100%);
+  background: linear-gradient(135deg, #381d02 0%, #381d02 100%);
 }
 
 .contact_section button:active,
@@ -1353,7 +1353,6 @@ a:focus {
     flex-direction: column;
     text-align: center;
   }
-}
 }
 
 /* --- Modernization Updates (Phase 2) --- */
