@@ -1458,3 +1458,156 @@ a:focus {
     background: linear-gradient(to bottom, rgba(255,255,255,0.95), transparent 40%);
   }
 }
+
+/* --- Techy About Section --- */
+.tech-about-section {
+  background-color: #1a1d23;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  padding: 80px 0;
+}
+
+/* Subtle tech grid background */
+.tech-about-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(252, 163, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(252, 163, 17, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 1;
+}
+
+.tech-about-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Glassmorphic Tech Card */
+.tech-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(252, 163, 17, 0.2);
+  border-left: 4px solid #fca311;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(252, 163, 17, 0.15);
+  border-color: rgba(252, 163, 17, 0.5);
+}
+
+.tech-heading {
+  font-family: 'Courier New', Courier, monospace;
+  color: #fca311;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(252, 163, 17, 0.4);
+}
+
+.tech-heading::after {
+  content: '_';
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.tech-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.tech-link-highlight {
+  color: #fca311;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dashed #fca311;
+  transition: all 0.3s ease;
+}
+
+.tech-link-highlight:hover {
+  color: #fff;
+  border-bottom-style: solid;
+  text-shadow: 0 0 8px rgba(252, 163, 17, 0.6);
+}
+
+/* Cyber Button */
+.tech-btn {
+  display: inline-block;
+  background: transparent;
+  color: #fca311;
+  border: 1px solid #fca311;
+  padding: 12px 30px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.tech-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 100%; height: 100%;
+  background: #fca311;
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+.tech-btn:hover {
+  color: #1a1d23;
+  box-shadow: 0 0 15px rgba(252, 163, 17, 0.6);
+}
+
+.tech-btn:hover::before {
+  left: 0;
+}
+
+/* Image Glowing Tech Frame */
+.tech-img-wrapper {
+  position: relative;
+  border-radius: 12px;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(252,163,17,0.4) 0%, rgba(26,29,35,0) 100%);
+  box-shadow: 0 0 30px rgba(252, 163, 17, 0.1);
+}
+
+.tech-img-wrapper img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  filter: contrast(1.1) brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.tech-img-wrapper:hover img {
+  filter: contrast(1.1) brightness(1.1);
+}
+
+.tech-img-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 1px solid rgba(252, 163, 17, 0.3);
+  border-radius: 12px;
+  pointer-events: none;
+}
