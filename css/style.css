@@ -1412,6 +1412,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .support-visual img {
@@ -1419,6 +1420,8 @@ a:focus {
   height: auto;
   object-fit: contain;
   display: block;
+  margin-top: -7%;
+  margin-bottom: -7%;
 }
 
 .support-visual::after {
