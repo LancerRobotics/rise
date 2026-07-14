@@ -1,3 +1,3 @@
 # RISE
 
-Information about Rise can be found at rise-robotics.org
+Information about Rise can be found at https://rise-robotics.org
