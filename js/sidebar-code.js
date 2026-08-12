@@ -21,9 +21,15 @@ const lessons = [
     { num: 18, file: '2.18.html',   title: 'Work Day' },
     { num: 19, file: '2.19.html',   title: 'Work Day' },
     { num: 20, file: '2.20.html',   title: 'Test and Competition Day' },
-//    { num: 21, file: '2.21.html',   title: 'Advanced Sensor Control' },
-//    { num: 22, file: '2.22.html',   title: 'Programming with Functions' },
-//    { num: 23, file: '2.23.html',   title: 'Capstone Challenge and Reflection' }
+    { num: 21, file: '2.21.html',   title: 'Block Stacking Challenge' },
+    { num: 22, file: '2.22.html',   title: 'Motor Blocks' },
+    { num: 23, file: '2.23.html',   title: 'Work Day' },
+    { num: 24, file: '2.24.html',   title: 'Work Day' },
+    { num: 25, file: '2.25.html',   title: 'Work Day' },
+    { num: 26, file: '2.26.html',   title: 'Work Day' },
+    { num: 27, file: '2.27.html',   title: 'Work Day' },
+    { num: 28, file: '2.28.html',   title: 'Test Day' },
+    { num: 29, file: '2.29.html',   title: 'Reflection' }
   ];
 
 const currentFile = window.location.pathname.split('/').pop();
