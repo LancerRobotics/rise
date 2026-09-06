@@ -1120,11 +1120,20 @@ a:focus {
   /* Needs to have a value above 140px */
 }
 
-.ourteam-page .team-grid {
+/* Team section, merged into the About page */
+.team_section {
+  scroll-margin-top: 110px;
+  /* clears the fixed header when jumping to #team */
+  padding-top: 20px;
+}
+
+.ourteam-page .team-grid,
+.team_section .team-grid {
   row-gap: 40px;
 }
 
-.ourteam-page .team-member {
+.ourteam-page .team-member,
+.team_section .team-member {
   background: #ffffff;
   border: 1px solid #D6CFAF;
   border-radius: 12px;
@@ -1139,12 +1148,14 @@ a:focus {
   transition: transform .28s ease, box-shadow .28s ease;
 }
 
-.ourteam-page .team-member:hover {
+.ourteam-page .team-member:hover,
+.team_section .team-member:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
 }
 
-.ourteam-page .team-member .img-box {
+.ourteam-page .team-member .img-box,
+.team_section .team-member .img-box {
   width: 157px;
   height: 236px;
   border-radius: 8px;
@@ -1154,7 +1165,8 @@ a:focus {
   position: relative;
 }
 
-.ourteam-page .team-member .img-box img {
+.ourteam-page .team-member .img-box img,
+.team_section .team-member .img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1162,11 +1174,13 @@ a:focus {
   transition: transform .6s ease;
 }
 
-.ourteam-page .team-member:hover .img-box img {
+.ourteam-page .team-member:hover .img-box img,
+.team_section .team-member:hover .img-box img {
   transform: scale(1.07);
 }
 
-.ourteam-page .team-member h5 {
+.ourteam-page .team-member h5,
+.team_section .team-member h5 {
   font-size: 1rem;
   font-weight: 700;
   margin: 14px 0 4px;
@@ -1174,7 +1188,8 @@ a:focus {
   letter-spacing: .3px;
 }
 
-.ourteam-page .team-member .role {
+.ourteam-page .team-member .role,
+.team_section .team-member .role {
   font-size: .8rem;
   font-weight: 500;
   margin: 0 0 4px;
@@ -1182,7 +1197,8 @@ a:focus {
   line-height: 1.3;
 }
 
-.ourteam-page .team-member .role:after {
+.ourteam-page .team-member .role:after,
+.team_section .team-member .role:after {
   content: "";
   display: block;
   width: 40px;
@@ -1192,7 +1208,8 @@ a:focus {
   border-radius: 2px;
 }
 
-.ourteam-page .team-member .member-school {
+.ourteam-page .team-member .member-school,
+.team_section .team-member .member-school {
   font-size: 14px;
   color: #555;
   margin-top: 0px;
@@ -1200,11 +1217,13 @@ a:focus {
 }
 
 @media (max-width: 575.98px) {
-  .ourteam-page .team-member {
+  .ourteam-page .team-member,
+  .team_section .team-member {
     padding: 16px 14px 20px;
   }
 
-  .ourteam-page .team-member .img-box {
+  .ourteam-page .team-member .img-box,
+  .team_section .team-member .img-box {
     width: 140px;
     height: 210px;
   }
